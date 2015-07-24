@@ -271,6 +271,7 @@
         return frame;
     }
     
+    //页眉从Button的顶部开始
 //    frame.origin.y = (_barPosition > UIBarPositionBottom) ? 0.0f : (button.frame.size.height-self.selectionIndicatorHeight);
     
     if (self.autoAdjustSelectionIndicatorWidth) {
@@ -306,6 +307,7 @@
 }
 
 - (CGRect)hairlineRect {
+    //页眉高度
     CGRect frame = CGRectMake(0.0f, 0.0f, self.frame.size.width, _selectionIndicatorHeight);
     
     return frame;

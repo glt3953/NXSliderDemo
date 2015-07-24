@@ -65,6 +65,9 @@
  */
 - (instancetype)initWithItems:(NSArray *)items;
 
+//未选中的颜色
+- (void)setNormalColor:(UIColor *)color;
+
 /**
  Sets the tint color of a segment.
  

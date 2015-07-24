@@ -250,10 +250,10 @@
     
     if (!color) {
         switch (state) {
-            case UIControlStateNormal:              return [UIColor lightGrayColor];
+            case UIControlStateNormal:              return [UIColor darkGrayColor];
             case UIControlStateHighlighted:         return self.tintColor;
-            case UIControlStateDisabled:            return [UIColor lightGrayColor];
-            case UIControlStateSelected:            return [UIColor colorWithRed:50/255.0f green:174/255.0f blue:153/255.0f alpha:1.0f];
+            case UIControlStateDisabled:            return [UIColor darkGrayColor];
+            case UIControlStateSelected:            return self.tintColor;
             default:                                return self.tintColor;
         }
     }
@@ -373,13 +373,21 @@
     [self layoutSubviews];
 }
 
+- (void)setNormalColor:(UIColor *)color {
+    if (!color || !self.items || self.initializing) {
+        return;
+    }
+    
+    [self setTitleColor:color forState:UIControlStateNormal];
+    [self setTitleColor:color forState:UIControlStateDisabled];
+}
+
 - (void)setTintColor:(UIColor *)color
 {
     if (!color || !self.items || self.initializing) {
         return;
     }
-    
-    color = [UIColor colorWithRed:50/255.0f green:174/255.0f blue:153/255.0f alpha:1.0f];
+
     [super setTintColor:color];
     
     [self setTitleColor:color forState:UIControlStateHighlighted];

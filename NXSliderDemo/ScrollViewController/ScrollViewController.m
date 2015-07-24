@@ -45,6 +45,8 @@
     self.segmentedControl.items = @[@"邮箱认证", @"证件认证"];
     self.segmentedControl.showsCount = NO;
     self.segmentedControl.autoAdjustSelectionIndicatorWidth = NO;
+    [self.segmentedControl setTintColor:[UIColor colorWithRed:50/255.0f green:174/255.0f blue:153/255.0f alpha:1.0f]];
+    [self.segmentedControl setNormalColor:[UIColor lightGrayColor]];
     [self.view addSubview:_segmentedControl];
     self.scrollView.segmentedControl = self.segmentedControl;
 }

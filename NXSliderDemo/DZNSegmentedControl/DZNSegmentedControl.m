@@ -131,7 +131,7 @@
     self.selectionIndicator.frame = [self selectionIndicatorRect];
     _hairline.frame = [self hairlineRect];
     
-    [self sendSubviewToBack:self.selectionIndicator];
+    [self sendSubviewToBack:_hairline];
 }
 
 - (void)willMoveToSuperview:(UIView *)newSuperview
@@ -271,7 +271,7 @@
         return frame;
     }
     
-    frame.origin.y = (_barPosition > UIBarPositionBottom) ? 0.0f : (button.frame.size.height-self.selectionIndicatorHeight);
+//    frame.origin.y = (_barPosition > UIBarPositionBottom) ? 0.0f : (button.frame.size.height-self.selectionIndicatorHeight);
     
     if (self.autoAdjustSelectionIndicatorWidth) {
         
@@ -305,10 +305,8 @@
     return self.hairline.backgroundColor;
 }
 
-- (CGRect)hairlineRect
-{
-    CGRect frame = CGRectMake(0.0f, 0.0f, self.frame.size.width, 0.5f);
-//    frame.origin.y = (self.barPosition > UIBarPositionBottom) ? 0.0f : self.frame.size.height;
+- (CGRect)hairlineRect {
+    CGRect frame = CGRectMake(0.0f, 0.0f, self.frame.size.width, _selectionIndicatorHeight);
     
     return frame;
 }

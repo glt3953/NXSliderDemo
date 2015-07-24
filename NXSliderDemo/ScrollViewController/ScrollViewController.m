@@ -99,7 +99,23 @@
         [self.scrollView addSubview:label];
         
         originX += CGRectGetWidth(frame);
+        
+        
+//        UILabel *subLabel = [[UILabel alloc] initWithFrame:(CGRect){0, 0, 10, 10}];
+//        subLabel.textAlignment = NSTextAlignmentCenter;
+//        [subLabel setTextColor:[UIColor blackColor]];
+//        subLabel.font = [UIFont systemFontOfSize:15];
+//        subLabel.numberOfLines = 0;
+//        subLabel.text = @"介绍\n这篇文章主要是介绍一下我在iOS开发中使用到的一些可以提升开发效率的方法和工具。\nIDE\n首先要说的肯定是IDE了，说到IDE，Xcode不能跑，当然你也可能同时在使用AppCode等其他的IDE，在这里我主要介绍Xcode中提升开发效率的方法。\n1.善用快捷键\n快捷键是开发中必不可少的，当你善于使用快捷键的时候，十指在键盘上飞舞，那画面太美，我不敢想象。";
+//        [label addSubview:subLabel];
+//        [UIView animateWithDuration:1.5 animations:^{
+//            [subLabel setFrame:(CGRect){0, 50, label.bounds.size}];
+//        } completion:^(BOOL finished) {
+////            [subLabel setFrame:(CGRect){0, 50, label.bounds.size}];
+//        }];
     }];
+    
+    
     
     self.scrollView.contentSize = CGSizeMake(originX, self.scrollView.frame.size.height);
 }

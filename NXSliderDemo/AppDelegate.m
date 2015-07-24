@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "NXSliderViewController.h"
+#import "ScrollViewController.h"
 
 @interface AppDelegate ()
 
@@ -20,7 +21,8 @@
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 //    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:[[NXSliderViewController alloc] init]];
-    self.window.rootViewController = [[NXSliderViewController alloc] init];
+//    self.window.rootViewController = [[NXSliderViewController alloc] init];
+    self.window.rootViewController = [[ScrollViewController alloc] init];
     [self.window makeKeyAndVisible];
     
     return YES;

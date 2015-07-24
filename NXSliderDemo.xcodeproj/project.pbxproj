@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		5A2BA07E1B5E00420001B922 /* back@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A2BA07D1B5E00420001B922 /* back@3x.png */; };
+		5A4CDE031B61E84A0069207A /* DZNSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4CDE001B61E84A0069207A /* DZNSegmentedControl.m */; };
+		5A4CDE041B61E84A0069207A /* UIScrollView+DZNSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4CDE021B61E84A0069207A /* UIScrollView+DZNSegmentedControl.m */; };
+		5A4CDE0C1B61E9F70069207A /* ScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4CDE0B1B61E9F70069207A /* ScrollViewController.m */; };
 		5A5DCB7B1B5D021300C7DA7A /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5DCB7A1B5D021300C7DA7A /* MenuViewController.m */; };
 		5A5DCBA81B5D028100C7DA7A /* back_highlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A5DCB7E1B5D028100C7DA7A /* back_highlight.png */; };
 		5A5DCBA91B5D028100C7DA7A /* green_circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A5DCB7F1B5D028100C7DA7A /* green_circle.png */; };
@@ -73,6 +76,12 @@
 
 /* Begin PBXFileReference section */
 		5A2BA07D1B5E00420001B922 /* back@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@3x.png"; sourceTree = "<group>"; };
+		5A4CDDFF1B61E84A0069207A /* DZNSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZNSegmentedControl.h; sourceTree = "<group>"; };
+		5A4CDE001B61E84A0069207A /* DZNSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZNSegmentedControl.m; sourceTree = "<group>"; };
+		5A4CDE011B61E84A0069207A /* UIScrollView+DZNSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+DZNSegmentedControl.h"; sourceTree = "<group>"; };
+		5A4CDE021B61E84A0069207A /* UIScrollView+DZNSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+DZNSegmentedControl.m"; sourceTree = "<group>"; };
+		5A4CDE0A1B61E9F70069207A /* ScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollViewController.h; sourceTree = "<group>"; };
+		5A4CDE0B1B61E9F70069207A /* ScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollViewController.m; sourceTree = "<group>"; };
 		5A5DCB791B5D021300C7DA7A /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		5A5DCB7A1B5D021300C7DA7A /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		5A5DCB7E1B5D028100C7DA7A /* back_highlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back_highlight.png; sourceTree = "<group>"; };
@@ -153,6 +162,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A4CDDFE1B61E84A0069207A /* DZNSegmentedControl */ = {
+			isa = PBXGroup;
+			children = (
+				5A4CDDFF1B61E84A0069207A /* DZNSegmentedControl.h */,
+				5A4CDE001B61E84A0069207A /* DZNSegmentedControl.m */,
+				5A4CDE011B61E84A0069207A /* UIScrollView+DZNSegmentedControl.h */,
+				5A4CDE021B61E84A0069207A /* UIScrollView+DZNSegmentedControl.m */,
+			);
+			path = DZNSegmentedControl;
+			sourceTree = "<group>";
+		};
+		5A4CDE091B61E9F70069207A /* ScrollViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5A4CDE0A1B61E9F70069207A /* ScrollViewController.h */,
+				5A4CDE0B1B61E9F70069207A /* ScrollViewController.m */,
+			);
+			path = ScrollViewController;
+			sourceTree = "<group>";
+		};
 		5A5DCB7C1B5D028100C7DA7A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -255,6 +284,8 @@
 		5AB724941B57500C00A5D3DD /* NXSliderDemo */ = {
 			isa = PBXGroup;
 			children = (
+				5A4CDE091B61E9F70069207A /* ScrollViewController */,
+				5A4CDDFE1B61E84A0069207A /* DZNSegmentedControl */,
 				5A5DCBD01B5D2ACE00C7DA7A /* NXSliderViewController */,
 				5A5DCB7C1B5D028100C7DA7A /* Resources */,
 				5ADD24171B58B25400FB195F /* NXRangeSlider */,
@@ -450,9 +481,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				5ADD241A1B58B25400FB195F /* NXRangeSlider.m in Sources */,
+				5A4CDE031B61E84A0069207A /* DZNSegmentedControl.m in Sources */,
 				5A5DCB7B1B5D021300C7DA7A /* MenuViewController.m in Sources */,
 				5AB7249B1B57500C00A5D3DD /* AppDelegate.m in Sources */,
 				5A5DCBD31B5D2B0900C7DA7A /* NXSliderViewController.m in Sources */,
+				5A4CDE0C1B61E9F70069207A /* ScrollViewController.m in Sources */,
+				5A4CDE041B61E84A0069207A /* UIScrollView+DZNSegmentedControl.m in Sources */,
 				5AB724981B57500C00A5D3DD /* main.m in Sources */,
 				5AB724A11B57500C00A5D3DD /* ViewController.m in Sources */,
 				5AB7249E1B57500C00A5D3DD /* NXSliderDemo.xcdatamodeld in Sources */,

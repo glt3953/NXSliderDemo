@@ -13,8 +13,12 @@
 @property (strong, nonatomic) UIView *backgroundView;
 @property (strong, nonatomic) UIView *leftSliderView;
 @property (strong, nonatomic) UIView *rightSliderView;
-@property (nonatomic) CGFloat minPos;
-@property (nonatomic) CGFloat maxPos;
+//@property (nonatomic) CGFloat minPos;
+//@property (nonatomic) CGFloat maxPos;
+@property (nonatomic) CGFloat leftSliderMinPos;
+@property (nonatomic) CGFloat leftSliderMaxPos;
+@property (nonatomic) CGFloat rightSliderMinPos;
+@property (nonatomic) CGFloat rightSliderMaxPos;
 @property (nonatomic) CGFloat valuerPerPixel; //每像素的值
 
 @end
@@ -91,10 +95,14 @@
         [self.rangeSliderDelegate rightValueDidChange:self];
     }
     
-    _minPos = 0 + self.sliderOffset;
-    _maxPos = self.frame.size.width - self.sliderOffset - [self sliderWidth];
-    _valuerPerPixel = (_maxValue - _minValue) / (_maxPos - _minPos);
-//    _valuerPerPixel = (_maxValue - _minValueRange) / (self.frame.size.width - (self.sliderOffset + [self sliderWidth]));
+//    _minPos = 0 + self.sliderOffset;
+//    _maxPos = self.frame.size.width - self.sliderOffset - [self sliderWidth];
+    _leftSliderMinPos = self.sliderOffset;
+    _leftSliderMaxPos = self.frame.size.width - 3 * self.sliderOffset - 2 * [self sliderWidth];
+    _rightSliderMinPos = 3 * self.sliderOffset + [self sliderWidth];
+    _rightSliderMaxPos = self.frame.size.width - (self.sliderOffset + [self sliderWidth]);
+    _valuerPerPixel = (_maxValue - _minValue - _minValueRange) / (_leftSliderMaxPos - _leftSliderMinPos);
+//    _valuerPerPixel = (_maxValue - _minValue - _minValueRange) / (_maxPos - _minPos);
 }
 
 - (CGFloat)positionForValue:(CGFloat)value {
@@ -137,10 +145,10 @@
             [self.rangeSliderDelegate leftValueDidChange:self];
         }
         
-        if (self.leftSliderView.frame.origin.x < _minPos) {
-            self.leftSliderView.frame = CGRectMake(_minPos, self.leftSliderView.frame.origin.y, self.leftSliderView.frame.size.width, self.leftSliderView.frame.size.height);
-        } else if (self.leftSliderView.frame.origin.x > _maxPos) {
-            self.leftSliderView.frame = CGRectMake(_maxPos, self.leftSliderView.frame.origin.y, self.leftSliderView.frame.size.width, self.leftSliderView.frame.size.height);
+        if (self.leftSliderView.frame.origin.x < _leftSliderMinPos) {
+            self.leftSliderView.frame = CGRectMake(_leftSliderMinPos, self.leftSliderView.frame.origin.y, self.leftSliderView.frame.size.width, self.leftSliderView.frame.size.height);
+        } else if (self.leftSliderView.frame.origin.x > _leftSliderMaxPos) {
+            self.leftSliderView.frame = CGRectMake(_leftSliderMaxPos, self.leftSliderView.frame.origin.y, self.leftSliderView.frame.size.width, self.leftSliderView.frame.size.height);
         }
     }
 }
@@ -151,10 +159,11 @@
         CGPoint translation = [rec translationInView:rec.view];
         center = CGPointMake(center.x + translation.x, center.y);
         rec.view.center = center;
+        center.x -= [self sliderWidth];//右侧的滑块坐标优化
         [rec setTranslation:CGPointZero inView:rec.view];
         
         CGPoint leftCenter = self.leftSliderView.center;
-        CGFloat minPos = leftCenter.x + ([self sliderWidth] + self.sliderOffset) / 2;
+        CGFloat minPos = leftCenter.x + [self sliderWidth] / 2 + 2 * self.sliderOffset;
         if (self.rightSliderView.frame.origin.x <= minPos) {
             self.rightValue = self.leftValue + _minValueRange;
             self.rightSliderView.frame = (CGRect){minPos, self.rightSliderView.frame.origin.y, self.rightSliderView.frame.size};
@@ -169,10 +178,10 @@
             [self.rangeSliderDelegate rightValueDidChange:self];
         }
         
-        if (self.rightSliderView.frame.origin.x < _minPos) {
-            self.rightSliderView.frame = CGRectMake(_minPos, self.rightSliderView.frame.origin.y, self.rightSliderView.frame.size.width, self.rightSliderView.frame.size.height);
-        } else if (self.rightSliderView.frame.origin.x > _maxPos) {
-            self.rightSliderView.frame = CGRectMake(_maxPos, self.rightSliderView.frame.origin.y, self.rightSliderView.frame.size.width, self.rightSliderView.frame.size.height);
+        if (self.rightSliderView.frame.origin.x < _rightSliderMinPos) {
+            self.rightSliderView.frame = CGRectMake(_rightSliderMinPos, self.rightSliderView.frame.origin.y, self.rightSliderView.frame.size.width, self.rightSliderView.frame.size.height);
+        } else if (self.rightSliderView.frame.origin.x > _rightSliderMaxPos) {
+            self.rightSliderView.frame = CGRectMake(_rightSliderMaxPos, self.rightSliderView.frame.origin.y, self.rightSliderView.frame.size.width, self.rightSliderView.frame.size.height);
         }
     }
 }

@@ -53,6 +53,7 @@
 		5A5DCBCE1B5D028100C7DA7A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A5DCBA61B5D028100C7DA7A /* LaunchScreen.xib */; };
 		5A5DCBCF1B5D028100C7DA7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A5DCBA71B5D028100C7DA7A /* Main.storyboard */; };
 		5A5DCBD31B5D2B0900C7DA7A /* NXSliderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5DCBD21B5D2B0900C7DA7A /* NXSliderViewController.m */; };
+		5AA2C1EF1B63896C00381023 /* PlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA2C1EE1B63896C00381023 /* PlaceholderTextView.m */; };
 		5AB724981B57500C00A5D3DD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB724971B57500C00A5D3DD /* main.m */; };
 		5AB7249B1B57500C00A5D3DD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB7249A1B57500C00A5D3DD /* AppDelegate.m */; };
 		5AB7249E1B57500C00A5D3DD /* NXSliderDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5AB7249C1B57500C00A5D3DD /* NXSliderDemo.xcdatamodeld */; };
@@ -126,6 +127,8 @@
 		5A5DCBA71B5D028100C7DA7A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		5A5DCBD11B5D2B0900C7DA7A /* NXSliderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NXSliderViewController.h; sourceTree = "<group>"; };
 		5A5DCBD21B5D2B0900C7DA7A /* NXSliderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NXSliderViewController.m; sourceTree = "<group>"; };
+		5AA2C1ED1B63896C00381023 /* PlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceholderTextView.h; sourceTree = "<group>"; };
+		5AA2C1EE1B63896C00381023 /* PlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceholderTextView.m; sourceTree = "<group>"; };
 		5AB724921B57500C00A5D3DD /* NXSliderDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NXSliderDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AB724961B57500C00A5D3DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5AB724971B57500C00A5D3DD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -263,6 +266,15 @@
 			path = NXSliderViewController;
 			sourceTree = "<group>";
 		};
+		5AA2C1EC1B63896C00381023 /* PlaceholderTextView */ = {
+			isa = PBXGroup;
+			children = (
+				5AA2C1ED1B63896C00381023 /* PlaceholderTextView.h */,
+				5AA2C1EE1B63896C00381023 /* PlaceholderTextView.m */,
+			);
+			path = PlaceholderTextView;
+			sourceTree = "<group>";
+		};
 		5AB724891B57500C00A5D3DD = {
 			isa = PBXGroup;
 			children = (
@@ -284,6 +296,7 @@
 		5AB724941B57500C00A5D3DD /* NXSliderDemo */ = {
 			isa = PBXGroup;
 			children = (
+				5AA2C1EC1B63896C00381023 /* PlaceholderTextView */,
 				5A4CDE091B61E9F70069207A /* ScrollViewController */,
 				5A4CDDFE1B61E84A0069207A /* DZNSegmentedControl */,
 				5A5DCBD01B5D2ACE00C7DA7A /* NXSliderViewController */,
@@ -488,6 +501,7 @@
 				5A4CDE0C1B61E9F70069207A /* ScrollViewController.m in Sources */,
 				5A4CDE041B61E84A0069207A /* UIScrollView+DZNSegmentedControl.m in Sources */,
 				5AB724981B57500C00A5D3DD /* main.m in Sources */,
+				5AA2C1EF1B63896C00381023 /* PlaceholderTextView.m in Sources */,
 				5AB724A11B57500C00A5D3DD /* ViewController.m in Sources */,
 				5AB7249E1B57500C00A5D3DD /* NXSliderDemo.xcdatamodeld in Sources */,
 			);

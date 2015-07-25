@@ -79,8 +79,8 @@ static CGFloat priceFontSize = 15.0f;
         NSMutableAttributedString *attributedString = [self attributedStringFromValue:value];
         
         CGFloat leftSliderCenter = [_priceSlider leftSliderCenter];
-        [_leftPriceLabel setFrame:(CGRect){_priceSlider.bounds.origin.x + leftSliderCenter, _priceSlider.frame.origin.y + CGRectGetHeight(_priceSlider.bounds) + 10, attributedString.size}];
-        [_leftPriceLabel setCenter:CGPointMake(leftSliderCenter + CGRectGetHeight(_priceSlider.bounds) / 2, _leftPriceLabel.center.y)];
+        [_leftPriceLabel setFrame:(CGRect){_priceSlider.bounds.origin.x + leftSliderCenter, _priceSlider.frame.origin.y - attributedString.size.height - 10, attributedString.size}];
+        [_leftPriceLabel setCenter:CGPointMake(leftSliderCenter + CGRectGetHeight(_priceSlider.bounds) / 4, _leftPriceLabel.center.y)];
         [_leftPriceLabel setAttributedText:attributedString];
     }
 }
@@ -92,8 +92,8 @@ static CGFloat priceFontSize = 15.0f;
         NSMutableAttributedString *attributedString = [self attributedStringFromValue:value];
         
         CGFloat rightSliderCenter = [_priceSlider rightSliderCenter];
-        [_rightPriceLabel setFrame:(CGRect){_priceSlider.bounds.origin.x + rightSliderCenter, _priceSlider.frame.origin.y + CGRectGetHeight(_priceSlider.bounds) + 10, attributedString.size}];
-        [_rightPriceLabel setCenter:CGPointMake(rightSliderCenter + CGRectGetHeight(_priceSlider.bounds) / 2, _rightPriceLabel.center.y)];
+        [_rightPriceLabel setFrame:(CGRect){_priceSlider.bounds.origin.x + rightSliderCenter, _priceSlider.frame.origin.y - attributedString.size.height - 10, attributedString.size}];
+        [_rightPriceLabel setCenter:CGPointMake(rightSliderCenter + CGRectGetHeight(_priceSlider.bounds) / 4, _rightPriceLabel.center.y)];
         [_rightPriceLabel setAttributedText:attributedString];
     }
 }

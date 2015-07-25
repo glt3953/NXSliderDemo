@@ -29,8 +29,10 @@ static CGFloat priceFontSize = 15.0f;
 //    [self.view setBackgroundColor:[UIColor colorWithRed:221.0/255.0 green:221.0/255.0 blue:221.0/255.0 alpha:1.0]];
     [self.view setBackgroundColor:[UIColor lightGrayColor]];
     
-    CGFloat spaceX = 20;
-    _priceSlider = [[NXRangeSlider alloc] initWithFrame:CGRectMake(spaceX, 150, CGRectGetWidth(self.view.bounds) - 2 * spaceX, 50)];
+    CGFloat originX = 20.0f;
+    CGFloat originY = 80.0f;
+    CGFloat sliderHeight = 50.0f;
+    _priceSlider = [[NXRangeSlider alloc] initWithFrame:CGRectMake(originX, originY, CGRectGetWidth(self.view.bounds) - 2 * originX, sliderHeight)];
     _priceSlider.backgroundColor = [UIColor colorWithRed:221/255.0f green:221/255.0f blue:221/255.0f alpha:1.0f];
     _priceSlider.rangeSliderDelegate = self;
     _priceSlider.minValue = 0;
@@ -59,6 +61,37 @@ static CGFloat priceFontSize = 15.0f;
     self.view.layer.shadowOffset = CGSizeMake(-10, 10);//shadowOffset阴影偏移,x向右偏移4，y向下偏移4，默认(0, -3)
     self.view.layer.shadowOpacity = 0.5;//阴影透明度，默认0
     self.view.layer.shadowRadius = 10.0f; //阴影半径
+    
+    originY += sliderHeight;
+    originY += 20.0f;
+    CGRect frame = self.view.frame;
+    frame.origin.y += originY;
+    frame.size.height -= originY;
+    //使用UIDataDetectorTypes自动检测电话、网址和邮箱
+    UITextView *textView = [[UITextView alloc] initWithFrame:frame];
+    [textView setBackgroundColor:[UIColor clearColor]];
+    textView.dataDetectorTypes = UIDataDetectorTypeAll;
+    textView.font = [UIFont systemFontOfSize:20];
+    textView.editable = NO;
+    textView.text = @"\r\n用户服务专线    010-52882522 (周一至周六：09:30-18:30) \r\n\r\n"
+    "公司首页： www.107room.com \r\n\r\n"
+    "媒体合作     jinyu@107room.com \r\n\r\n";
+//    textView.text = @"北京六度草堂网络科技有限公司
+//    简介
+//    我们是一家前沿互联网公司，致力于“租房4.0”产品和服务的提供。主要产品「107间」是直接连接租客与房东的真实智能租房平台
+//    核心团队为85后，毕业于北京大学、剑桥大学、香港大学等国内外名校，发展至今已拥有十余人的稳定团队
+//    Logo·名称·文化
+//    logo由斐波那契黄金分割曲线演化而来，从起点经过6个节点不断延伸。代表六度空间理论，即人与人之间的联结性，以及形成关系后的无限可能
+//    “六度草堂”中草堂取自杜甫草堂，杜甫的诗句“安得广厦千万间，大庇天下寒士俱欢颜”是我们所追求的理想
+//    产品愿景
+//    租房1.0——传统中介，利用地面门店获取房源并通过信息垄断牟利
+//    租房2.0——分类网站，用互联网提升了部分效率，但信息混乱质量低劣，也没有延伸到线下
+//    租房3.0——打着互联网旗号但本质依然通过地面人员联结租房双方的产品，包括传统中介从线下到线上的改变
+//    我们的做法：租房4.0——重视信息“真实”与交互“智能”，从线上大量的真实有效信息出发，用移动互联、智能匹配的方式让用户更简单地租房
+//    联系方式
+//    商务洽谈     weiwei@107room.com          媒体合作     jinyu@107room.com
+//    用户服务专线    010-52882522 (周一至周六：09:30-18:30)";
+    [self.view addSubview:textView];
 }
 
 - (IBAction)menuButtonDidClick:(id)sender {

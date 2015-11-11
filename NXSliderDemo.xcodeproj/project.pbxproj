@@ -59,6 +59,7 @@
 		5AB724A91B57500C00A5D3DD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AB724A71B57500C00A5D3DD /* LaunchScreen.xib */; };
 		5AB724B51B57500C00A5D3DD /* NXSliderDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB724B41B57500C00A5D3DD /* NXSliderDemoTests.m */; };
 		5ADD241A1B58B25400FB195F /* NXRangeSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ADD24191B58B25400FB195F /* NXRangeSlider.m */; };
+		5AEB4A2F1BF2201B00E8DCB7 /* FirstPushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEB4A2E1BF2201B00E8DCB7 /* FirstPushViewController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,6 +134,8 @@
 		5AB724B41B57500C00A5D3DD /* NXSliderDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NXSliderDemoTests.m; sourceTree = "<group>"; };
 		5ADD24181B58B25400FB195F /* NXRangeSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NXRangeSlider.h; sourceTree = "<group>"; };
 		5ADD24191B58B25400FB195F /* NXRangeSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NXRangeSlider.m; sourceTree = "<group>"; };
+		5AEB4A2D1BF2201B00E8DCB7 /* FirstPushViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstPushViewController.h; sourceTree = "<group>"; };
+		5AEB4A2E1BF2201B00E8DCB7 /* FirstPushViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstPushViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -269,6 +272,8 @@
 				5AB724951B57500C00A5D3DD /* Supporting Files */,
 				5A5DCB791B5D021300C7DA7A /* MenuViewController.h */,
 				5A5DCB7A1B5D021300C7DA7A /* MenuViewController.m */,
+				5AEB4A2D1BF2201B00E8DCB7 /* FirstPushViewController.h */,
+				5AEB4A2E1BF2201B00E8DCB7 /* FirstPushViewController.m */,
 			);
 			path = NXSliderDemo;
 			sourceTree = "<group>";
@@ -452,6 +457,7 @@
 				5ADD241A1B58B25400FB195F /* NXRangeSlider.m in Sources */,
 				5A5DCB7B1B5D021300C7DA7A /* MenuViewController.m in Sources */,
 				5AB7249B1B57500C00A5D3DD /* AppDelegate.m in Sources */,
+				5AEB4A2F1BF2201B00E8DCB7 /* FirstPushViewController.m in Sources */,
 				5A5DCBD31B5D2B0900C7DA7A /* NXSliderViewController.m in Sources */,
 				5AB724981B57500C00A5D3DD /* main.m in Sources */,
 				5AB724A11B57500C00A5D3DD /* ViewController.m in Sources */,

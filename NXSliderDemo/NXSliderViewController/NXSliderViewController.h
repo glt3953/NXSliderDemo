@@ -10,4 +10,6 @@
 
 @interface NXSliderViewController : UIViewController
 
+@property (nonatomic, strong) UINavigationController *homeNavigationController;
+
 @end

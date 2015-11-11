@@ -58,7 +58,11 @@ static CGFloat DistanceOfLeftView = 50;
     [self.view addSubview:_blackCover];
     
     _centerViewController = [[ViewController alloc] init];
-    _centerView = _centerViewController.view;
+    _homeNavigationController = [[UINavigationController alloc] init];
+    [_homeNavigationController setViewControllers:@[_centerViewController]];
+    NSLog(@"_homeNavigationController.viewControllers:%@", _homeNavigationController.viewControllers);
+    _centerView = _homeNavigationController.view;
+//    _centerView = _centerViewController.view;
     UIButton *menuButton = [[UIButton alloc] initWithFrame:(CGRect){5, 20, 30, 20}];
     [menuButton setImage:[UIImage imageNamed:@"icon_titlebar_menu.png"] forState:UIControlStateNormal];
     [menuButton addTarget:self action:@selector(showLeftView) forControlEvents:UIControlEventTouchUpInside];
@@ -66,6 +70,7 @@ static CGFloat DistanceOfLeftView = 50;
     [self.view addSubview:_centerView];
     
     UIPanGestureRecognizer *viewPanGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(viewMoved:)];
+//    [_centerViewController.view addGestureRecognizer:viewPanGesture];
     [_centerView addGestureRecognizer:viewPanGesture];
     
     _tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showCenterView)];
@@ -80,7 +85,7 @@ static CGFloat DistanceOfLeftView = 50;
     CGFloat X = [rec translationInView:self.view].x;
     CGFloat trueDistance = _distance + X; // 实时距离
     CGFloat trueProportion = trueDistance / ([self mainScreenSize].width * FullDistanceProportion);
-    NSLog(@"X:%f, trueProportion:%f", X, trueProportion);
+//    NSLog(@"X:%f, trueProportion:%f", X, trueProportion);
     
     if (rec.state == UIGestureRecognizerStateBegan) {
         if (trueProportion >= 0) {

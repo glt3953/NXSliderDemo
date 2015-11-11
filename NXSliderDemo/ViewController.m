@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "NXRangeSlider.h"
+#import "FirstPushViewController.h"
 
 static CGFloat unitFontSize = 10.0f;
 static CGFloat priceFontSize = 15.0f;
@@ -59,6 +60,19 @@ static CGFloat priceFontSize = 15.0f;
     self.view.layer.shadowOffset = CGSizeMake(-10, 10);//shadowOffset阴影偏移,x向右偏移4，y向下偏移4，默认(0, -3)
     self.view.layer.shadowOpacity = 0.5;//阴影透明度，默认0
     self.view.layer.shadowRadius = 10.0f; //阴影半径
+    
+    CGRect frame = (CGRect){22, 300, 60, 30};
+    UIButton *button = [[UIButton alloc] initWithFrame:frame];
+    [button setTitle:@"jump" forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(buttonDidClick:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button];
+}
+
+- (IBAction)buttonDidClick:(id)sender {
+    NSLog(@"self.navigationController:%@", self.navigationController);
+    FirstPushViewController *firstPushViewController = [[FirstPushViewController alloc] init];
+    [self.navigationController pushViewController:firstPushViewController animated:YES];
+    NSLog(@"self.navigationController.viewControllers:%@", self.navigationController.viewControllers);
 }
 
 - (IBAction)menuButtonDidClick:(id)sender {

@@ -21,6 +21,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 //    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:[[NXSliderViewController alloc] init]];
     self.window.rootViewController = [[NXSliderViewController alloc] init];
+//    self.window.rootViewController = navigationController;
     [self.window makeKeyAndVisible];
     
     return YES;

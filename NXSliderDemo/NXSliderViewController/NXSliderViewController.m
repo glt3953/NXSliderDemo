@@ -59,9 +59,10 @@ static CGFloat DistanceOfLeftView = 50;
     
     _centerViewController = [[ViewController alloc] init];
     _homeNavigationController = [[UINavigationController alloc] init];
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+//    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     [_homeNavigationController.navigationBar setBarTintColor:[UIColor colorFromHexString:@"#25b6ed"]];
-    [_homeNavigationController.navigationBar setTintColor:[UIColor whiteColor]];
+    _homeNavigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName:[UIColor whiteColor]};//控制标题的样式
+    [_homeNavigationController.navigationBar setTintColor:[UIColor whiteColor]];//控制返回按钮的样式
     [_homeNavigationController.navigationBar setTranslucent:NO];
     [_homeNavigationController setViewControllers:@[_centerViewController]];
     NSLog(@"_homeNavigationController.viewControllers:%@", _homeNavigationController.viewControllers);

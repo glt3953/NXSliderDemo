@@ -59,10 +59,10 @@ static CGFloat DistanceOfLeftView = 50;
     
     _centerViewController = [[ViewController alloc] init];
     _homeNavigationController = [[UINavigationController alloc] init];
-//    [_homeNavigationController.navigationBar setBarStyle:UIBarStyleDefault];
-//    [_homeNavigationController.navigationBar setBarTintColor:[UIColor whiteColor]];
-//    [_homeNavigationController.navigationBar setTintColor:[UIColor whiteColor]];
-//    [_homeNavigationController.navigationBar setTranslucent:NO];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    [_homeNavigationController.navigationBar setBarTintColor:[UIColor colorFromHexString:@"#25b6ed"]];
+    [_homeNavigationController.navigationBar setTintColor:[UIColor whiteColor]];
+    [_homeNavigationController.navigationBar setTranslucent:NO];
     [_homeNavigationController setViewControllers:@[_centerViewController]];
     NSLog(@"_homeNavigationController.viewControllers:%@", _homeNavigationController.viewControllers);
     _centerView = _homeNavigationController.view;

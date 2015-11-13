@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A54F6251BF5F6D000F27CCC /* SuiteSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A54F6241BF5F6D000F27CCC /* SuiteSearchViewController.m */; settings = {ASSET_TAGS = (); }; };
+		5A54F6261BF5F6D000F27CCC /* SuiteSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A54F6241BF5F6D000F27CCC /* SuiteSearchViewController.m */; settings = {ASSET_TAGS = (); }; };
+		5A54F6291BF5F6F200F27CCC /* InterestSuiteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A54F6281BF5F6F200F27CCC /* InterestSuiteViewController.m */; settings = {ASSET_TAGS = (); }; };
+		5A54F62A1BF5F6F200F27CCC /* InterestSuiteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A54F6281BF5F6F200F27CCC /* InterestSuiteViewController.m */; settings = {ASSET_TAGS = (); }; };
+		5A54F62D1BF5F70200F27CCC /* RentalManageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A54F62C1BF5F70200F27CCC /* RentalManageViewController.m */; settings = {ASSET_TAGS = (); }; };
+		5A54F62E1BF5F70200F27CCC /* RentalManageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A54F62C1BF5F70200F27CCC /* RentalManageViewController.m */; settings = {ASSET_TAGS = (); }; };
+		5A54F6311BF5F71200F27CCC /* PostSuiteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A54F6301BF5F71200F27CCC /* PostSuiteViewController.m */; settings = {ASSET_TAGS = (); }; };
+		5A54F6321BF5F71200F27CCC /* PostSuiteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A54F6301BF5F71200F27CCC /* PostSuiteViewController.m */; settings = {ASSET_TAGS = (); }; };
+		5A54F6351BF5F74200F27CCC /* PostSuiteManageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A54F6341BF5F74200F27CCC /* PostSuiteManageViewController.m */; settings = {ASSET_TAGS = (); }; };
+		5A54F6361BF5F74200F27CCC /* PostSuiteManageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A54F6341BF5F74200F27CCC /* PostSuiteManageViewController.m */; settings = {ASSET_TAGS = (); }; };
 		5A5DCB7B1B5D021300C7DA7A /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5DCB7A1B5D021300C7DA7A /* MenuViewController.m */; };
 		5A5DCBCD1B5D028100C7DA7A /* 107RoomIcon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A5DCBA41B5D028100C7DA7A /* 107RoomIcon.ttf */; };
 		5A5DCBCE1B5D028100C7DA7A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A5DCBA61B5D028100C7DA7A /* LaunchScreen.xib */; };
@@ -71,6 +81,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5A54F6231BF5F6D000F27CCC /* SuiteSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuiteSearchViewController.h; sourceTree = "<group>"; };
+		5A54F6241BF5F6D000F27CCC /* SuiteSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuiteSearchViewController.m; sourceTree = "<group>"; };
+		5A54F6271BF5F6F200F27CCC /* InterestSuiteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterestSuiteViewController.h; sourceTree = "<group>"; };
+		5A54F6281BF5F6F200F27CCC /* InterestSuiteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterestSuiteViewController.m; sourceTree = "<group>"; };
+		5A54F62B1BF5F70200F27CCC /* RentalManageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RentalManageViewController.h; sourceTree = "<group>"; };
+		5A54F62C1BF5F70200F27CCC /* RentalManageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RentalManageViewController.m; sourceTree = "<group>"; };
+		5A54F62F1BF5F71200F27CCC /* PostSuiteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostSuiteViewController.h; sourceTree = "<group>"; };
+		5A54F6301BF5F71200F27CCC /* PostSuiteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostSuiteViewController.m; sourceTree = "<group>"; };
+		5A54F6331BF5F74200F27CCC /* PostSuiteManageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostSuiteManageViewController.h; sourceTree = "<group>"; };
+		5A54F6341BF5F74200F27CCC /* PostSuiteManageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostSuiteManageViewController.m; sourceTree = "<group>"; };
 		5A5DCB791B5D021300C7DA7A /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		5A5DCB7A1B5D021300C7DA7A /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		5A5DCBA41B5D028100C7DA7A /* 107RoomIcon.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 107RoomIcon.ttf; sourceTree = "<group>"; };
@@ -378,6 +398,16 @@
 			children = (
 				5AD7B7701BF2E272000CBC37 /* Room107ViewController.h */,
 				5AD7B7711BF2E272000CBC37 /* Room107ViewController.m */,
+				5A54F6231BF5F6D000F27CCC /* SuiteSearchViewController.h */,
+				5A54F6241BF5F6D000F27CCC /* SuiteSearchViewController.m */,
+				5A54F6271BF5F6F200F27CCC /* InterestSuiteViewController.h */,
+				5A54F6281BF5F6F200F27CCC /* InterestSuiteViewController.m */,
+				5A54F62B1BF5F70200F27CCC /* RentalManageViewController.h */,
+				5A54F62C1BF5F70200F27CCC /* RentalManageViewController.m */,
+				5A54F62F1BF5F71200F27CCC /* PostSuiteViewController.h */,
+				5A54F6301BF5F71200F27CCC /* PostSuiteViewController.m */,
+				5A54F6331BF5F74200F27CCC /* PostSuiteManageViewController.h */,
+				5A54F6341BF5F74200F27CCC /* PostSuiteManageViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -560,6 +590,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A54F62D1BF5F70200F27CCC /* RentalManageViewController.m in Sources */,
 				5AD7B7AE1BF2E589000CBC37 /* NSDate+Additions.m in Sources */,
 				5AD7B7891BF2E4E8000CBC37 /* SearchTipLabel.m in Sources */,
 				5AD7B77F1BF2E457000CBC37 /* CustomButton.m in Sources */,
@@ -577,10 +608,12 @@
 				5AD7B76D1BF2E205000CBC37 /* AppConfig.m in Sources */,
 				5AD7B7BA1BF2E589000CBC37 /* NSString+Random.m in Sources */,
 				5AD7B7481BF2E042000CBC37 /* UIImage+Room107.m in Sources */,
+				5A54F6291BF5F6F200F27CCC /* InterestSuiteViewController.m in Sources */,
 				5ADD241A1B58B25400FB195F /* NXRangeSlider.m in Sources */,
 				5AD7B7B11BF2E589000CBC37 /* NSManagedObject+Additions.m in Sources */,
 				5AD7B7AD1BF2E589000CBC37 /* NSArray+Additions.m in Sources */,
 				5AD7B7721BF2E272000CBC37 /* Room107ViewController.m in Sources */,
+				5A54F6351BF5F74200F27CCC /* PostSuiteManageViewController.m in Sources */,
 				5A5DCB7B1B5D021300C7DA7A /* MenuViewController.m in Sources */,
 				5AD7B7BB1BF2E589000CBC37 /* NSString+Valid.m in Sources */,
 				5AD7B7621BF2E0CC000CBC37 /* RegularExpressionUtil.m in Sources */,
@@ -593,12 +626,14 @@
 				5AD7B7861BF2E4BE000CBC37 /* GreenTextButton.m in Sources */,
 				5AD7B7B91BF2E589000CBC37 /* NSString+Encoded.m in Sources */,
 				5A5DCBD31B5D2B0900C7DA7A /* NXSliderViewController.m in Sources */,
+				5A54F6311BF5F71200F27CCC /* PostSuiteViewController.m in Sources */,
 				5AB724981B57500C00A5D3DD /* main.m in Sources */,
 				5AD7B7B61BF2E589000CBC37 /* NSObject+KVO.m in Sources */,
 				5AD7B7B41BF2E589000CBC37 /* NSNumberFormatter+Additions.m in Sources */,
 				5AD7B7601BF2E0CC000CBC37 /* NXURLHandler.m in Sources */,
 				5AD7B7801BF2E457000CBC37 /* CustomImageView.m in Sources */,
 				5AD7B7631BF2E0CC000CBC37 /* TimeUtil.m in Sources */,
+				5A54F6251BF5F6D000F27CCC /* SuiteSearchViewController.m in Sources */,
 				5AD7B7B51BF2E589000CBC37 /* NSObject+Introspection.m in Sources */,
 				5AD7B7B21BF2E589000CBC37 /* NSMutableURLRequest+Headers.m in Sources */,
 				5AB724A11B57500C00A5D3DD /* ViewController.m in Sources */,
@@ -612,6 +647,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				5AB724B51B57500C00A5D3DD /* NXSliderDemoTests.m in Sources */,
+				5A54F6321BF5F71200F27CCC /* PostSuiteViewController.m in Sources */,
+				5A54F62E1BF5F70200F27CCC /* RentalManageViewController.m in Sources */,
+				5A54F6261BF5F6D000F27CCC /* SuiteSearchViewController.m in Sources */,
+				5A54F6361BF5F74200F27CCC /* PostSuiteManageViewController.m in Sources */,
+				5A54F62A1BF5F6F200F27CCC /* InterestSuiteViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

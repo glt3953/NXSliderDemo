@@ -7,6 +7,11 @@
 //
 
 #import "MenuViewController.h"
+#import "SuiteSearchViewController.h"
+#import "InterestSuiteViewController.h"
+#import "RentalManageViewController.h"
+#import "PostSuiteViewController.h"
+#import "PostSuiteManageViewController.h"
 
 @interface MenuViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -91,7 +96,53 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    switch (indexPath.section) {
+        case 0:
+            switch (indexPath.row) {
+                case 0:
+                {
+                    SuiteSearchViewController *suiteSearchViewController = [[SuiteSearchViewController alloc] init];
+//                    [[NSNotificationCenter defaultCenter] postNotificationName:SideslipCenterViewControllerDidChangeNotification object:suiteSearchViewController];
+                }
+                    break;
+                case 1:
+                {
+                    InterestSuiteViewController *interestSuiteViewController = [[InterestSuiteViewController alloc] init];
+//                    [[NSNotificationCenter defaultCenter] postNotificationName:SideslipCenterViewControllerDidChangeNotification object:interestSuiteViewController];
+                }
+                    break;
+                case 2:
+                {
+                    RentalManageViewController *rentalManageViewController = [[RentalManageViewController alloc] init];
+//                    [[NSNotificationCenter defaultCenter] postNotificationName:SideslipCenterViewControllerDidChangeNotification object:rentalManageViewController];
+                }
+                    break;
+                default:
+                    break;
+            }
+            break;
+        case 1:
+            switch (indexPath.row) {
+                case 0:
+                {
+                    PostSuiteViewController *postSuiteViewController = [[PostSuiteViewController alloc] init];
+//                    [[NSNotificationCenter defaultCenter] postNotificationName:SideslipCenterViewControllerDidChangeNotification object:postSuiteViewController];
+                }
+                    break;
+                case 1:
+                {
+                    PostSuiteManageViewController *postSuiteManageViewController = [[PostSuiteManageViewController alloc] init];
+//                    [[NSNotificationCenter defaultCenter] postNotificationName:SideslipCenterViewControllerDidChangeNotification object:postSuiteManageViewController];
+                }
+                    break;
+                default:
+                    break;
+            }
+            break;
+        default:
+            break;
+    }
 }
 
 - (void)didReceiveMemoryWarning {

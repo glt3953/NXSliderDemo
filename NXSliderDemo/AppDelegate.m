@@ -24,6 +24,16 @@
 //    self.window.rootViewController = navigationController;
     [self.window makeKeyAndVisible];
     
+    // 改变 StatusBar 颜色
+//    application.statusBarStyle = UIStatusBarStyleLightContent;
+    
+    // 改变 navigation bar 的背景色及前景色
+//    let navigationBarAppearace = UINavigationBar.appearance()
+//    navigationBarAppearace.translucent = false
+//    navigationBarAppearace.barTintColor = UIColor(hex: 0x25b6ed)
+//    navigationBarAppearace.tintColor = UIColor.whiteColor()
+//    navigationBarAppearace.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]
+    
     return YES;
 }
 

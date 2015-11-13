@@ -69,6 +69,8 @@ static CGFloat priceFontSize = 15.0f;
 }
 
 - (IBAction)buttonDidClick:(id)sender {
+//    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"itms-apps://itunes.apple.com/cn/app/wei/id414478124"]]; //跳转至App Store
+    
     NSLog(@"self.navigationController:%@", self.navigationController);
     FirstPushViewController *firstPushViewController = [[FirstPushViewController alloc] init];
     [self.navigationController pushViewController:firstPushViewController animated:YES];
@@ -77,6 +79,10 @@ static CGFloat priceFontSize = 15.0f;
 
 - (IBAction)menuButtonDidClick:(id)sender {
     
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
 }
 
 - (void)didReceiveMemoryWarning {

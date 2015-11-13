@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FirstPushViewController : UIViewController
+@interface FirstPushViewController : Room107ViewController
 
 @end

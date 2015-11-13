@@ -7,6 +7,7 @@
 //
 
 #import "MenuViewController.h"
+#import "ViewController.h"
 #import "SuiteSearchViewController.h"
 #import "InterestSuiteViewController.h"
 #import "RentalManageViewController.h"
@@ -28,9 +29,10 @@
     
     [self.view setBackgroundColor:[UIColor clearColor]];
     
+    NSMutableDictionary *personalDictionary = [[NSMutableDictionary alloc] initWithObjectsAndKeys:@"个人", @"name", [[NSMutableArray alloc] initWithObjects:@{@"icon":@"1", @"name":@"主页"}, nil], @"values", nil];
     NSMutableDictionary *renterDictionary = [[NSMutableDictionary alloc] initWithObjectsAndKeys:@"租客", @"name", [[NSMutableArray alloc] initWithObjects:@{@"icon":@"1", @"name":@"我的找房"}, @{@"icon":@"1", @"name":@"目标房间"}, @{@"icon":@"1", @"name":@"租住管理"}, nil], @"values", nil];
     NSMutableDictionary *landlordDictionary = [[NSMutableDictionary alloc] initWithObjectsAndKeys:@"房东", @"name", [[NSMutableArray alloc] initWithObjects:@{@"icon":@"1", @"name":@"发房页"}, @{@"icon":@"1", @"name":@"发房管理"}, nil], @"values", nil];
-    _memuArray = [[NSMutableArray alloc] initWithObjects:renterDictionary, landlordDictionary, nil];
+    _memuArray = [[NSMutableArray alloc] initWithObjects:personalDictionary, renterDictionary, landlordDictionary, nil];
     
     _menuTableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStyleGrouped];
     [_menuTableView setBackgroundColor:[UIColor clearColor]];
@@ -99,11 +101,19 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     switch (indexPath.section) {
         case 0:
+        {
+            ViewController *viewController = [[ViewController alloc] init];
+            [viewController setTitle:_memuArray[indexPath.section][@"values"][indexPath.row][@"name"]];
+            [[NSNotificationCenter defaultCenter] postNotificationName:SideslipCenterViewControllerDidChangeNotification object:viewController];
+        }
+            break;
+        case 1:
             switch (indexPath.row) {
                 case 0:
                 {
                     SuiteSearchViewController *suiteSearchViewController = [[SuiteSearchViewController alloc] init];
-//                    [[NSNotificationCenter defaultCenter] postNotificationName:SideslipCenterViewControllerDidChangeNotification object:suiteSearchViewController];
+                    [suiteSearchViewController setTitle:_memuArray[indexPath.section][@"values"][indexPath.row][@"name"]];
+                    [[NSNotificationCenter defaultCenter] postNotificationName:SideslipCenterViewControllerDidChangeNotification object:suiteSearchViewController];
                 }
                     break;
                 case 1:
@@ -122,7 +132,7 @@
                     break;
             }
             break;
-        case 1:
+        case 2:
             switch (indexPath.row) {
                 case 0:
                 {

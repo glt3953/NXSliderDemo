@@ -29,7 +29,7 @@
 #import "Log.h"
 //#import "OAuth2Token.h"
 //#import "TimeUtil.h"
-//#import "NotificationNames.h"
+#import "NotificationNames.h"
 //#import "ManagedObject.h"
 #import "AppDelegate.h"
 #import "Util.h"

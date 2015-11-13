@@ -29,6 +29,7 @@ static CGFloat priceFontSize = 15.0f;
     // Do any additional setup after loading the view, typically from a nib.
 //    [self.view setBackgroundColor:[UIColor colorWithRed:221.0/255.0 green:221.0/255.0 blue:221.0/255.0 alpha:1.0]];
     [self.view setBackgroundColor:[UIColor lightGrayColor]];
+    [self setTitle:@"主页"];
     
     CGFloat spaceX = 20;
     _priceSlider = [[NXRangeSlider alloc] initWithFrame:CGRectMake(spaceX, 150, CGRectGetWidth(self.view.bounds) - 2 * spaceX, 50)];
@@ -71,7 +72,7 @@ static CGFloat priceFontSize = 15.0f;
 - (IBAction)buttonDidClick:(id)sender {
 //    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"itms-apps://itunes.apple.com/cn/app/wei/id414478124"]]; //跳转至App Store
     
-    NSLog(@"self.navigationController:%@", self.navigationController);
+//    NSLog(@"self.navigationController:%@", self.navigationController);
     FirstPushViewController *firstPushViewController = [[FirstPushViewController alloc] init];
     [self.navigationController pushViewController:firstPushViewController animated:YES];
     NSLog(@"self.navigationController.viewControllers:%@", self.navigationController.viewControllers);

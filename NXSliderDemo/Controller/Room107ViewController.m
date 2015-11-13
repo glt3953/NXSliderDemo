@@ -26,7 +26,7 @@
 
 @property (nonatomic, strong) UIView *headerView;
 @property (nonatomic, strong) CustomButton *leftButton;
-@property (nonatomic, strong) CustomLabel *titleLabel;
+//@property (nonatomic, strong) CustomLabel *titleLabel;
 @property (nonatomic, strong) GreenTextButton *rightButton;
 @property (nonatomic) HeaderType headerType;
 @property (nonatomic, strong) SearchTipLabel *contentLabel;
@@ -69,12 +69,12 @@
     [self.view addSubview:_leftButton];
     _leftButton.hidden = YES;
     
-    _titleLabel = [[CustomLabel alloc] initWithFrame:(CGRect){originX + buttonWidth, statusBarHeight, labelWidth, [self heightOfNavigationBar]}];
-    [_titleLabel setTextAlignment:NSTextAlignmentCenter];
-    [_titleLabel setTextColor:[UIColor whiteColor]];
-    [_titleLabel setFont:[UIFont room107FontFour]];
-    [self.view addSubview:_titleLabel];
-    _titleLabel.hidden = YES;
+//    _titleLabel = [[CustomLabel alloc] initWithFrame:(CGRect){originX + buttonWidth, statusBarHeight, labelWidth, [self heightOfNavigationBar]}];
+//    [_titleLabel setTextAlignment:NSTextAlignmentCenter];
+//    [_titleLabel setTextColor:[UIColor whiteColor]];
+//    [_titleLabel setFont:[UIFont room107FontFour]];
+//    [self.view addSubview:_titleLabel];
+//    _titleLabel.hidden = YES;
     
     _rightButton = [[GreenTextButton alloc] initWithFrame:(CGRect){CGRectGetWidth(self.view.bounds) - originX - 4 * buttonWidth, originY, 4 * buttonWidth, buttonWidth}];
     [_rightButton setEnlargeEdgeWithTop:10 right:10 bottom:10 left:10];
@@ -144,7 +144,7 @@
 - (void)setHeaderType:(HeaderType)type {
     [self.view bringSubviewToFront:_headerView];
     [self.view bringSubviewToFront:_leftButton];
-    [self.view bringSubviewToFront:_titleLabel];
+//    [self.view bringSubviewToFront:_titleLabel];
     [self.view bringSubviewToFront:_rightButton];
     _headerType = type;
     
@@ -162,11 +162,11 @@
         case HeaderTypeGreenAndBack:
             _headerView.hidden = NO;
             _leftButton.hidden = NO;
-            _titleLabel.hidden = NO;
+//            _titleLabel.hidden = NO;
             break;
         case HeaderTypeGreenAndMenu:
             _headerView.hidden = NO;
-            _titleLabel.hidden = NO;
+//            _titleLabel.hidden = NO;
             break;
         default:
             break;
@@ -193,9 +193,10 @@
     return [self heightOfNavigationBar] + [self spacingY] + 2 * [self spacingY];
 }
 
-- (void)setTitle:(NSString *)title {
-    [_titleLabel setText:title];
-}
+//- (void)setTitle:(NSString *)title {
+//    _titleLabel.hidden = NO;
+//    [_titleLabel setText:title];
+//}
 
 - (IBAction)leftButtonDidClick:(id)sender {
     [self dismissViewControllerAnimated:YES completion:^{

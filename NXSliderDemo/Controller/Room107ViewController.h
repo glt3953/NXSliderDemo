@@ -27,7 +27,7 @@ typedef enum {
 - (CGFloat)heightOfNavigationBar;
 - (CGFloat)heightOfSegmentedControl;
 - (CGFloat)heightOfTradingProcessView;
-- (void)setTitle:(NSString *)title;
+//- (void)setTitle:(NSString *)title;
 - (void)setRightButtonTitle:(NSString *)title;
 - (void)showLoginOrRegisterViewController;
 - (void)showAuthenticateViewController;

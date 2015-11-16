@@ -58,6 +58,9 @@ static CGFloat DistanceOfLeftView = 50;
     [self.view addSubview:_blackCover];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(sideslipCenterViewControllerDidChange:) name:SideslipCenterViewControllerDidChangeNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showLeftView) name:SideslipShowLeftViewNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showCenterView) name:SideslipShowCenterViewNotification object:nil];
+    
     [self resetCenterViewController:[[ViewController alloc] init]];
     
     _tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showCenterView)];
@@ -76,8 +79,8 @@ static CGFloat DistanceOfLeftView = 50;
     if (!_homeNavigationController) {
         _homeNavigationController = [[UINavigationController alloc] init];
         //    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
-        [_homeNavigationController.navigationBar setBarTintColor:[UIColor colorFromHexString:@"#25b6ed"]];
-        _homeNavigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName:[UIColor whiteColor]};//控制标题的样式
+        [_homeNavigationController.navigationBar setBarTintColor:[UIColor room107GreenColor]];
+        _homeNavigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName:[UIColor whiteColor], NSFontAttributeName:[UIFont room107FontFour]};//控制标题的样式
         [_homeNavigationController.navigationBar setTintColor:[UIColor whiteColor]];//控制返回按钮的样式
         [_homeNavigationController.navigationBar setTranslucent:NO];
 //        [_homeNavigationController setViewControllers:@[_centerViewController]];
@@ -89,19 +92,12 @@ static CGFloat DistanceOfLeftView = 50;
     [_homeNavigationController setViewControllers:@[_centerViewController]];
     _centerView = _homeNavigationController.view;
     [self.view addSubview:_centerView];
-    //    _centerView = _centerViewController.view;
-    CGFloat memuWidth = 22.0f;
-    UIButton *menuButton = [[UIButton alloc] initWithFrame:(CGRect){11, statusBarHeight + ([self heightOfNavigationBar] - memuWidth) / 2, memuWidth, memuWidth}];
-//    [menuButton setEnlargeEdgeWithTop:10 right:10 bottom:10 left:10];
-    [menuButton.titleLabel setFont:[UIFont room107FontFour]];
-    [menuButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [menuButton setTitle:@"\ue611" forState:UIControlStateNormal];
-    [menuButton addTarget:self action:@selector(showLeftView) forControlEvents:UIControlEventTouchUpInside];
-    [_centerView addSubview:menuButton];
+
     [self showCenterView];
     
     UIPanGestureRecognizer *viewPanGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(viewMoved:)];
     [_centerView addGestureRecognizer:viewPanGesture];
+    [_centerViewController setHeaderType:HeaderTypeWhiteMenu];
 }
 
 - (CGSize)mainScreenSize {

@@ -10,10 +10,9 @@
 
 typedef enum {
     HeaderTypeNone = 2000, //无任何样式
-    HeaderTypeOnlyBack, //按钮为返回（绿色）
-    HeaderTypeGreenHeader, //绿底的Header
-    HeaderTypeGreenAndBack, //绿底，按钮为返回（白色）
-    HeaderTypeGreenAndMenu, //绿底，按钮为菜单（白色）
+    HeaderTypeGreenBack, //按钮为返回（绿色）
+    HeaderTypeWhiteBack, //按钮为返回（白色）
+    HeaderTypeWhiteMenu, //按钮为菜单（白色）
 } HeaderType;
 
 @interface Room107ViewController : UIViewController
@@ -27,8 +26,7 @@ typedef enum {
 - (CGFloat)heightOfNavigationBar;
 - (CGFloat)heightOfSegmentedControl;
 - (CGFloat)heightOfTradingProcessView;
-//- (void)setTitle:(NSString *)title;
-- (void)setRightButtonTitle:(NSString *)title;
+- (void)setRightBarButtonTitle:(NSString *)title;
 - (void)showLoginOrRegisterViewController;
 - (void)showAuthenticateViewController;
 - (BOOL)presentViewController:(UIViewController *)viewControllerToPresent;

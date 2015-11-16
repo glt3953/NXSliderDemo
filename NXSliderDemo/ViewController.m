@@ -216,7 +216,7 @@ static CGFloat priceFontSize = 15.0f;
         {
             ViewController *viewController = [[ViewController alloc] init];
             [viewController setTitle:_memuArray[indexPath.section][@"values"][indexPath.row][@"name"]];
-            //    [viewController setHeaderType:HeaderTypeGreenAndBack];
+            [viewController setHeaderType:HeaderTypeWhiteBack];
             [self.navigationController pushViewController:viewController animated:YES];
         }
             break;

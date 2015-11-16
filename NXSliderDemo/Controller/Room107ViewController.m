@@ -44,6 +44,13 @@
     
     [self.view setBackgroundColor:[UIColor room107ViewBackgroundColor]];
 
+//    UIButton *backButton = [[UIButton alloc] initWithFrame:(CGRect){0, 0, 30, 30}];
+//    [backButton.titleLabel setFont:[UIFont room107FontFour]];
+//    [backButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+//    [backButton setTitle:@"\ue60c" forState:UIControlStateNormal];
+//    [backButton addTarget:self action:@selector(leftBarButtonDidClick:) forControlEvents:UIControlEventTouchUpInside];
+//    _leftButtonItem = [[UIBarButtonItem alloc] initWithCustomView:backButton];
+    
 //    _leftButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage makeImageFromText:@"\ue60c" font:[UIFont room107FontFour] color:[UIColor whiteColor]] style:UIBarButtonItemStylePlain target:self action:@selector(leftBarButtonDidClick:)];
     switch (_headerType) {
         case HeaderTypeNone:

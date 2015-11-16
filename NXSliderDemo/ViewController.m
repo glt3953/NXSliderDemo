@@ -218,6 +218,11 @@ static CGFloat priceFontSize = 15.0f;
             [viewController setTitle:_memuArray[indexPath.section][@"values"][indexPath.row][@"name"]];
             [viewController setHeaderType:HeaderTypeWhiteBack];
             [self.navigationController pushViewController:viewController animated:YES];
+            //开启iOS7的滑动返回效果
+//            if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
+//                self.navigationController.interactivePopGestureRecognizer.enabled = YES;
+//                self.navigationController.interactivePopGestureRecognizer.delegate = nil;
+//            }
         }
             break;
         case 1:

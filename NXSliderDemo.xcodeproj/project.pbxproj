@@ -148,6 +148,14 @@
 		5A8701691BF990C900DBFA7B /* unloginlogo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A8701461BF990C900DBFA7B /* unloginlogo@2x.png */; settings = {ASSET_TAGS = (); }; };
 		5A87016A1BF990C900DBFA7B /* uploadDefault.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A8701471BF990C900DBFA7B /* uploadDefault.png */; settings = {ASSET_TAGS = (); }; };
 		5A87016B1BF990C900DBFA7B /* uploadDefault.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A8701471BF990C900DBFA7B /* uploadDefault.png */; settings = {ASSET_TAGS = (); }; };
+		5A87016E1BF9E8EE00DBFA7B /* MessageListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A87016D1BF9E8EE00DBFA7B /* MessageListViewController.m */; settings = {ASSET_TAGS = (); }; };
+		5A87016F1BF9E8EE00DBFA7B /* MessageListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A87016D1BF9E8EE00DBFA7B /* MessageListViewController.m */; settings = {ASSET_TAGS = (); }; };
+		5A8701721BF9E90400DBFA7B /* SuggestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8701711BF9E90400DBFA7B /* SuggestionViewController.m */; settings = {ASSET_TAGS = (); }; };
+		5A8701731BF9E90400DBFA7B /* SuggestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8701711BF9E90400DBFA7B /* SuggestionViewController.m */; settings = {ASSET_TAGS = (); }; };
+		5A8701761BF9E91300DBFA7B /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8701751BF9E91300DBFA7B /* AboutViewController.m */; settings = {ASSET_TAGS = (); }; };
+		5A8701771BF9E91300DBFA7B /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8701751BF9E91300DBFA7B /* AboutViewController.m */; settings = {ASSET_TAGS = (); }; };
+		5A8701791BF9E95300DBFA7B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5A8701781BF9E95300DBFA7B /* Localizable.strings */; settings = {ASSET_TAGS = (); }; };
+		5A87017A1BF9E95300DBFA7B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5A8701781BF9E95300DBFA7B /* Localizable.strings */; settings = {ASSET_TAGS = (); }; };
 		5AB724981B57500C00A5D3DD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB724971B57500C00A5D3DD /* main.m */; };
 		5AB7249B1B57500C00A5D3DD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB7249A1B57500C00A5D3DD /* AppDelegate.m */; };
 		5AB7249E1B57500C00A5D3DD /* NXSliderDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5AB7249C1B57500C00A5D3DD /* NXSliderDemo.xcdatamodeld */; };
@@ -331,6 +339,13 @@
 		5A8701451BF990C900DBFA7B /* studentcard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = studentcard.png; sourceTree = "<group>"; };
 		5A8701461BF990C900DBFA7B /* unloginlogo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "unloginlogo@2x.png"; sourceTree = "<group>"; };
 		5A8701471BF990C900DBFA7B /* uploadDefault.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = uploadDefault.png; sourceTree = "<group>"; };
+		5A87016C1BF9E8EE00DBFA7B /* MessageListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageListViewController.h; sourceTree = "<group>"; };
+		5A87016D1BF9E8EE00DBFA7B /* MessageListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageListViewController.m; sourceTree = "<group>"; };
+		5A8701701BF9E90400DBFA7B /* SuggestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuggestionViewController.h; sourceTree = "<group>"; };
+		5A8701711BF9E90400DBFA7B /* SuggestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuggestionViewController.m; sourceTree = "<group>"; };
+		5A8701741BF9E91300DBFA7B /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		5A8701751BF9E91300DBFA7B /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		5A8701781BF9E95300DBFA7B /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		5AB724921B57500C00A5D3DD /* NXSliderDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NXSliderDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AB724961B57500C00A5D3DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5AB724971B57500C00A5D3DD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -742,6 +757,7 @@
 		5AB724951B57500C00A5D3DD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5A8701781BF9E95300DBFA7B /* Localizable.strings */,
 				5AD7B7641BF2E10D000CBC37 /* Prefix.pch */,
 				5AB724961B57500C00A5D3DD /* Info.plist */,
 				5AB724971B57500C00A5D3DD /* main.m */,
@@ -847,6 +863,12 @@
 				5A54F6301BF5F71200F27CCC /* PostSuiteViewController.m */,
 				5A54F6331BF5F74200F27CCC /* PostSuiteManageViewController.h */,
 				5A54F6341BF5F74200F27CCC /* PostSuiteManageViewController.m */,
+				5A87016C1BF9E8EE00DBFA7B /* MessageListViewController.h */,
+				5A87016D1BF9E8EE00DBFA7B /* MessageListViewController.m */,
+				5A8701701BF9E90400DBFA7B /* SuggestionViewController.h */,
+				5A8701711BF9E90400DBFA7B /* SuggestionViewController.m */,
+				5A8701741BF9E91300DBFA7B /* AboutViewController.h */,
+				5A8701751BF9E91300DBFA7B /* AboutViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1007,6 +1029,7 @@
 				5A87014E1BF990C900DBFA7B /* beSignedOnline@2x.png in Resources */,
 				5A8701501BF990C900DBFA7B /* cardDefault.png in Resources */,
 				5A8701581BF990C900DBFA7B /* housePermit.jpg in Resources */,
+				5A8701791BF9E95300DBFA7B /* Localizable.strings in Resources */,
 				5A8701561BF990C900DBFA7B /* houseContract.jpg in Resources */,
 				5A5DCBCD1B5D028100C7DA7A /* 107RoomIcon.ttf in Resources */,
 				5A8701521BF990C900DBFA7B /* cycleScrollPlaceHolder.jpg in Resources */,
@@ -1044,6 +1067,7 @@
 				5A8701611BF990C900DBFA7B /* loading.gif in Resources */,
 				5A8701691BF990C900DBFA7B /* unloginlogo@2x.png in Resources */,
 				5A87015B1BF990C900DBFA7B /* identification.png in Resources */,
+				5A87017A1BF9E95300DBFA7B /* Localizable.strings in Resources */,
 				5A87014D1BF990C900DBFA7B /* 银行卡灰.png in Resources */,
 				5A8701511BF990C900DBFA7B /* cardDefault.png in Resources */,
 			);
@@ -1090,6 +1114,7 @@
 				5AD7B7BA1BF2E589000CBC37 /* NSString+Random.m in Sources */,
 				5A8700FE1BF98EBC00DBFA7B /* CustomMutableStringTableViewCell.m in Sources */,
 				5A8700B11BF98E5300DBFA7B /* RECommonFunctions.m in Sources */,
+				5A8701721BF9E90400DBFA7B /* SuggestionViewController.m in Sources */,
 				5A8700AB1BF98E5300DBFA7B /* UIAlertView+Blocks.m in Sources */,
 				5A8700A51BF98E5300DBFA7B /* EFCircularTrig.m in Sources */,
 				5AD7B7481BF2E042000CBC37 /* UIImage+Room107.m in Sources */,
@@ -1106,6 +1131,7 @@
 				5AD7B7BB1BF2E589000CBC37 /* NSString+Valid.m in Sources */,
 				5A8700BF1BF98E5300DBFA7B /* UIScrollView+SVPullToRefresh.m in Sources */,
 				5AD7B7621BF2E0CC000CBC37 /* RegularExpressionUtil.m in Sources */,
+				5A8701761BF9E91300DBFA7B /* AboutViewController.m in Sources */,
 				5AB7249B1B57500C00A5D3DD /* AppDelegate.m in Sources */,
 				5AEB4A2F1BF2201B00E8DCB7 /* FirstPushViewController.m in Sources */,
 				5AD7B76E1BF2E205000CBC37 /* Log.m in Sources */,
@@ -1135,6 +1161,7 @@
 				5A87011A1BF98EBC00DBFA7B /* Room107TableView.m in Sources */,
 				5A8700AD1BF98E5300DBFA7B /* NXRangeSlider.m in Sources */,
 				5A54F6251BF5F6D000F27CCC /* SuiteSearchViewController.m in Sources */,
+				5A87016E1BF9E8EE00DBFA7B /* MessageListViewController.m in Sources */,
 				5AD7B7B51BF2E589000CBC37 /* NSObject+Introspection.m in Sources */,
 				5AD7B7B21BF2E589000CBC37 /* NSMutableURLRequest+Headers.m in Sources */,
 				5A8701201BF98EBC00DBFA7B /* RoundedGreenButton.m in Sources */,
@@ -1173,6 +1200,7 @@
 				5A8701131BF98EBC00DBFA7B /* NXTextSwitch.m in Sources */,
 				5A8701151BF98EBC00DBFA7B /* ProcedureItemView.m in Sources */,
 				5A54F6321BF5F71200F27CCC /* PostSuiteViewController.m in Sources */,
+				5A8701771BF9E91300DBFA7B /* AboutViewController.m in Sources */,
 				5A8700BA1BF98E5300DBFA7B /* REMenuItemView.m in Sources */,
 				5A87010F1BF98EBC00DBFA7B /* NXIconTextField.m in Sources */,
 				5A8701111BF98EBC00DBFA7B /* NXSwitch.m in Sources */,
@@ -1185,6 +1213,7 @@
 				5A8700FD1BF98EBC00DBFA7B /* CustomInfoItemTableViewCell.m in Sources */,
 				5A8701011BF98EBC00DBFA7B /* CustomRoundButton.m in Sources */,
 				5A87012B1BF98EBC00DBFA7B /* YellowTextTipsLabel.m in Sources */,
+				5A87016F1BF9E8EE00DBFA7B /* MessageListViewController.m in Sources */,
 				5A8701271BF98EBC00DBFA7B /* StatusBarView.m in Sources */,
 				5A54F6261BF5F6D000F27CCC /* SuiteSearchViewController.m in Sources */,
 				5A87010D1BF98EBC00DBFA7B /* LicenseAgreementTableViewCell.m in Sources */,
@@ -1203,6 +1232,7 @@
 				5A54F62A1BF5F6F200F27CCC /* InterestSuiteViewController.m in Sources */,
 				5A8700B41BF98E5300DBFA7B /* REMenu.m in Sources */,
 				5A8701341BF98F1400DBFA7B /* NYPickerComponent.m in Sources */,
+				5A8701731BF9E90400DBFA7B /* SuggestionViewController.m in Sources */,
 				5A8700C21BF98E5300DBFA7B /* TLTagsControl.m in Sources */,
 				5A8701091BF98EBC00DBFA7B /* GreenTextButton.m in Sources */,
 				5A8700FB1BF98EBC00DBFA7B /* CircleGreenMarkView.m in Sources */,

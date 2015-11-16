@@ -13,6 +13,10 @@
 #import "RentalManageViewController.h"
 #import "PostSuiteViewController.h"
 #import "PostSuiteManageViewController.h"
+#import "CustomButton.h"
+#import "MessageListViewController.h"
+#import "SuggestionViewController.h"
+#import "AboutViewController.h"
 
 @interface MenuViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -39,8 +43,78 @@
     _menuTableView.delegate = self;
     _menuTableView.dataSource = self;
     _menuTableView.tableHeaderView = [[UIView alloc] initWithFrame:(CGRect){0, 0, self.view.bounds.size.width, 40.0f}];
-    _menuTableView.tableFooterView = [[UIView alloc] initWithFrame:(CGRect){0, 0, self.view.bounds.size.width, 40.0f}];
+    _menuTableView.tableFooterView = [self createTableFooterView];
     [self.view addSubview:_menuTableView];
+}
+
+- (UIView *)createTableFooterView {
+    UIView *footerView = [[UIView alloc] initWithFrame:(CGRect){0, CGRectGetHeight(self.view.bounds) - 80.0f, CGRectGetWidth(self.view.bounds), 80.0f}];
+    [footerView setBackgroundColor:[UIColor clearColor]];
+    
+    CGFloat originX = 22.0f;
+    CGFloat buttonHeight = 40.0f;
+    CGFloat buttonWidth = 60.0f;
+    CGFloat spaceX = 20.0f;
+    CGFloat originY = CGRectGetHeight(footerView.bounds) - buttonHeight - 20.0f;
+    CustomButton *messageButton = [[CustomButton alloc] initWithFrame:(CGRect){originX, originY, buttonWidth, buttonHeight}];
+    [messageButton setBackgroundColor:[UIColor clearColor]];
+    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:[@"\ue61f" stringByAppendingFormat:@" %@", lang(@"Message")]];
+    [attributedString addAttribute:NSForegroundColorAttributeName value:[UIColor room107GrayColorD] range:NSMakeRange(0, @"\ue61f".length)];
+    [messageButton setAttributedTitle:attributedString forState:UIControlStateNormal];
+    [messageButton setTitleColor:[UIColor room107GrayColorD] forState:UIControlStateNormal];
+    [messageButton.titleLabel setFont:[UIFont room107FontTwo]];
+    [messageButton addTarget:self action:@selector(messageButtonDidClick:) forControlEvents:UIControlEventTouchUpInside];
+    [footerView addSubview:messageButton];
+    
+    originX += buttonWidth + spaceX;
+    CustomButton *suggestionButton = [[CustomButton alloc] initWithFrame:(CGRect){originX, originY, buttonWidth, buttonHeight}];
+    [suggestionButton setBackgroundColor:[UIColor clearColor]];
+    attributedString = [[NSMutableAttributedString alloc] initWithString:[@"\ue620" stringByAppendingFormat:@" %@", lang(@"Suggestion")]];
+    [attributedString addAttribute:NSForegroundColorAttributeName value:[UIColor room107GrayColorD] range:NSMakeRange(0, @"\ue620".length)];
+    [suggestionButton setAttributedTitle:attributedString forState:UIControlStateNormal];
+    [suggestionButton setTitleColor:[UIColor room107GrayColorD] forState:UIControlStateNormal];
+    [suggestionButton.titleLabel setFont:[UIFont room107FontTwo]];
+    [suggestionButton addTarget:self action:@selector(suggestionButtonDidClick:) forControlEvents:UIControlEventTouchUpInside];
+    [footerView addSubview:suggestionButton];
+    
+    originX += buttonWidth + spaceX;
+    CustomButton *aboutButton = [[CustomButton alloc] initWithFrame:(CGRect){originX, originY, buttonWidth, buttonHeight}];
+    [aboutButton setBackgroundColor:[UIColor clearColor]];
+    attributedString = [[NSMutableAttributedString alloc] initWithString:[@"\ue63d" stringByAppendingFormat:@" %@", lang(@"About")]];
+    [attributedString addAttribute:NSForegroundColorAttributeName value:[UIColor room107GrayColorD] range:NSMakeRange(0, @"\ue63d".length)];
+    [aboutButton setAttributedTitle:attributedString forState:UIControlStateNormal];
+    [aboutButton setTitleColor:[UIColor room107GrayColorD] forState:UIControlStateNormal];
+    [aboutButton.titleLabel setFont:[UIFont room107FontTwo]];
+    [aboutButton addTarget:self action:@selector(aboutButtonDidClick:) forControlEvents:UIControlEventTouchUpInside];
+    [footerView addSubview:aboutButton];
+    
+    return footerView;
+}
+
+- (IBAction)messageButtonDidClick:(id)sender {
+    MessageListViewController *messageListViewController = [[MessageListViewController alloc] init];
+    [[NSNotificationCenter defaultCenter] postNotificationName:SideslipCenterViewControllerDidChangeNotification object:messageListViewController];
+    //    [messageListViewController setHeaderType:HeaderTypeGreenAndBack];
+    //    [self presentViewController:messageListViewController animated:YES completion:^{
+    //    }];
+}
+
+- (IBAction)suggestionButtonDidClick:(id)sender {
+    SuggestionViewController *suggestionViewController = [[SuggestionViewController alloc] init];
+    [[NSNotificationCenter defaultCenter] postNotificationName:SideslipCenterViewControllerDidChangeNotification object:suggestionViewController];
+    //    [suggestionViewController setHeaderType:HeaderTypeGreenAndBack];
+    //    [self presentViewController:suggestionViewController animated:YES completion:^{
+    //
+    //    }];
+}
+
+- (IBAction)aboutButtonDidClick:(id)sender {
+    AboutViewController *aboutViewController = [[AboutViewController alloc] init];
+    [[NSNotificationCenter defaultCenter] postNotificationName:SideslipCenterViewControllerDidChangeNotification object:aboutViewController];
+    //    [aboutViewController setHeaderType:HeaderTypeGreenAndBack];
+    //    [self presentViewController:aboutViewController animated:YES completion:^{
+    //        
+    //    }];
 }
 
 #pragma mark - UITableViewDataSource

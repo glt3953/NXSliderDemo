@@ -1,0 +1,565 @@
+/* 
+  Localizable.strings
+  room107
+
+  Created by ningxia on 15/6/29.
+  Copyright (c) 2015年 107room. All rights reserved.
+*/
+
+"WhetherToDeletePhoto" = "是否删除该照片？";
+"OK" = "好";
+"ProtocalExplanation" = "用户协议";
+"MonthlyPaymentExplanation" = "月付协议";
+"WalletExplanation" = "钱包说明";
+"PaymentExplanation" = "支付帮助";
+"Dial" = "呼叫";
+"More" = "\Ue642";//"更多"
+"Loading" = "加载中...";
+"FemaleLimit" = "限女生";
+"NoLimit" = "不限";
+"NoLimitGender" = "不限性别";
+"MaleLimit" = "限男生";
+"Floor" = "层";
+"Elevator" = "电梯";
+"WIFI" = "宽带";
+"AirConditioner" = "空调";
+"Fridge" = "冰箱";
+"WaterHeater" = "热水器";
+"Balcony" = "阳台";
+"Washer" = "洗衣机";
+"TV" = "电视";
+"ShareToFriend" = "发给朋友";
+"ContactLandlord" = "联系房东";
+"MaxAddressesNum" = "●可同时搜索5个地址，以空格隔开";
+"AddNewAddress" = "新增地址";
+"WayToAddNewAddress" = "按下空格或点击+可新增地址";
+"RenterType" = "我/我们是";
+"Lovers" = "情侣";
+"Female" = "女生";
+"Male" = "男生";
+"RentType" = "类型";
+"All" = "全部";
+"RentHouse" = "整租";
+"RentRoom" = "合租";
+"Budget" = "价格";
+"Distance" = "距离";
+"Publish" = "发布";
+"AddressIsEmpty" = "请输入详细地址";
+"PhoneNumberVerify" = "手机验证";
+
+// 登录 | 注册
+"EnterPhoneNumber" = "输入手机号码";
+"WrongPhoneNumber" = "请输入正确的手机号";
+"NextStep" = "下一步";
+"WelcomeBack" = "欢迎回来";
+"GetVerifyCode" = "获取验证码";
+"EnterVerifyCode" = "请输入验证码";
+"EmptyVerifyCode" = "验证码错误";
+"EnterPassword" = "输入密码";
+"ForgetPassword" = "忘记密码？";
+"SetPassword" = "请设置你的密码";
+"AgreeProtocalExplanation" = "注册即表示同意用户协议";
+"SetNewPassword" = "设置你的新密码";
+"Register" = "注册";
+"Login" = "登录";
+"BackToPreviousStep" = "返回上一步";
+"InvalidPassword" = "密码至少为5位";
+"LoginOrRegister" = "登录｜注册";
+"LookAround" = "随便看看";
+"UnknownError" = "网络不给力，稍后再试试吧";
+
+// 搜索页
+"SearchHouse" = "搜索房子";
+
+// 搜索结果页
+"UnreadNewHomes" = "未读新房";
+"ReadNewHomes" = "已读新房";
+"NewHomes" = "新房推送";
+"SearchResult" = "搜索结果";
+"TheAddressHasNoResult" = "该地址无搜索结果";
+
+// 房源详情页
+"BasicInfo" = "基本信息";
+"Facility" = "设备状况";
+"Description" = "详细描述";
+"OtherRoom" = "其他房子";
+"CopyLandlordWechat" = "已复制房东的微信号";
+"CopyLandlordQQ" = "已复制房东的QQ号";
+"WXAppSharedFail" = "尚未安装微信，下载安装后可分享";
+"QQAppSharedFail" = "尚未安装QQ，下载安装后可分享";
+"NoSuchContactInfo" = "该房间无此联系方式";
+
+// 认证
+"Authentication" = "身份认证";
+"Unauthenticated" = "未认证";
+"Authenticated" = "已认证";
+"EmailAuthenticate" = "邮箱认证";
+"EmailAuthenticateTips" = "仅限学校邮箱或企业邮箱";
+"EmailAuthenticatePlaceholder" = "xxx@pku.edu.cn 或 xxx@107room.com 等";
+"SendAuthenticateEmail" = "发送认证邮件";
+"Sending" = "发送中";
+"WrongEmail" = "请输入正确格式的邮箱";
+"AuthenticateLinkBeenSent" = "认证链接已发，请查收邮件进行认证";
+"ChangeEmail" = "更改邮箱";
+"CredentialsAuthenticate" = "证件认证";
+"AuthenticateTips" = "认证后可查看房东联系方式\n并可在线上完成安全保障签约\n享受房租分期、移动支付、免费维修等";
+"SelectIDPhoto" = "身份证正面照片";
+"SelectStudentcardOrWorkpermitPhoto" = "学生证件/工作证件照片";
+"Photos" = "从手机相册选择";
+"Camera" = "拍照";
+"Cancel" = "取消";
+"Done" = "完成";
+"DeviceDoesNotSupportTakePhotos" = "此设备不支持拍照";
+"ReselectPhoto" = "点击图片重新选择";
+"SuchAs" = "如";
+"Confirm" = "确定";
+"Uploading" = "上传中";
+"UploadSuccess" = "上传成功!\n认证结果将在1个工作日内发送消息通知";
+"Reupload" = "重新上传";
+
+"107Room" = "107间";
+"RentShare" = "出租分享";
+"MoneyPerMonth" = "元/月";
+"Message" = "消息";
+"Suggestion" = "建议";
+"SuggestionBox" = "意见箱";
+"SuggestionBoxTips" = "写下你对107间APP的意见和建议";
+"Submit" = "提交";
+"Submiting" = "提交中";
+"SubmitSuccessTips" = "意见提交成功，感谢支持！";
+"ContentIsEmpty" = "内容不能为空";
+"About" = "关于";
+"About107Room" = "关于107间";
+"Renter" = "租客";
+"MySearch" = "找房";
+"MyHome" = "主页";
+"MyWallet" = "钱包";
+
+//消息中心
+"MessageCenter" = "消息中心";
+"WhetherDeleteThisMessage" = "确定删除该条消息？";
+"HasNoMessage" = "当前无消息";
+
+// 目标房源
+"InterestSuite" = "待签约";
+"SignExplanation" = "签约须知";
+"BeSignedOnline" = "线上签约";
+"BeSignedOnlineExplanation" = "查看过房东联系方式后\n房子将自动加入此处\n可在此申请签约";
+"OnlySignedOffline" = "其他";
+"OnlySignedOfflineExplanation" = "查看过房东联系方式后\n房子将自动加入此处";
+"Report" = "举报";
+"SuiteReport" = "举报房子问题";
+"SuiteBeenRented" = "房子已租";
+"ReportBroker" = "举报中介";
+"OtherIssues" = "其他问题";
+"ReportTips" = "写下该房子的具体问题（如信息不实等）";
+"AtLeastOne" = "至少填报一项";
+"ReportSuccess" = "感谢你的举报，你的反馈会帮助107间更加真实、可信！";
+"SignedProcess" = "签约流程";
+"MyInfo" = "我的信息";
+"CompleteInfo" = "信息补充";
+"ContractConfirm" = "合同确认";
+"SignedAudit" = "签约审核";
+"SignedPayment" = "签约支付";
+"SignedDeal" = "签约交易";
+"DeleteSuite" = "删除该房子";
+"WhetherDeleteTargetSuite" = "是否删除该待签约房间？";
+"BeenRented" = "已租";
+
+// 租住管理
+"RentalManage" = "租住中";
+"RentalCompleted" = "租住已完成";
+"HistoryPayment" = "历史账单";
+"RepairExplanation" = "维修申请";
+"AppealsBreach" = "违约申诉";
+"PricingRules" = "定价规则";
+"NextPaymentDate" = "下次缴费时间";
+"UnpaidBills" = "无未付账单";
+"AmountsPayable" = "应付金额";
+"Payment" = "缴费";
+"RentAllowance" = "租房补贴";
+"RentMoneyInContract" = "合同月租";
+"ToPay" = "去支付";
+"PaymentResult" = "支付结果";
+"AppealsBreachTips" = "违约相关问题咨询或投诉请致电";
+"WXAppIsNotInstalled" = "尚未安装微信，可在107间网站上支付";
+"AlipayIsNotInstalled" = "尚未安装支付宝，可在107间网站上支付";
+"Landlord" = "房东";
+"PostSuitePage" = "发布房子";
+"HasNotRentingRoom" = "已完成签约的房子将在此页展示\n租金交付等在此处进行";
+
+// 房东管理页
+"PostSuiteManage" = "房子管理";
+"HouseStatus" = "房子状态";
+"ModifyInfo" = "修改信息";
+"WaitForRent" = "对外出租";
+"TemporarilyOutside" = "暂不对外";
+"OpenHouse" = "开放出租";
+"CloseHouse" = "关闭出租";
+"CloseHouseTips" = "关闭后房子将被下线，\n确定关闭吗？";
+"OpenHouseTips" = "开放该房子需补充基本信息，\n确定开放吗？";
+"SuiteAllowance" = "发房补贴";
+"ContractPrice" = "合同价格";
+"SuiteManage" = "理房";
+"RentProcess" = "出租流程";
+"SuiteCheck" = "审核";
+"SuiteForRent" = "待租";
+"Signed" = "签约";
+"Rent" = "出租";
+"HasNotPublishRoom" = "尚未发布房子\n已发布的房子将在此处管理";
+"UnderReview" = "审核中";
+"InInvitation" = "邀约中";
+"PostSuiteManageExplanation" = "已发布的房子在此页展示\n可查看房间、修改信息、开放/关闭出租\n并可在此页管理签约情况";
+
+// 签约邀请
+"Ongoing" = "正在进行";
+"SignedInvite" = "签约邀请";
+"LeaseTerm" = "租期";
+"CheckIn" = "入住";
+"Reimburse" = "退租";
+"Date" = "日期";
+"Time" = "时间";
+"Renting" = "租住中";
+"Confirming" = "签约中";
+"Filling" = "申请中";
+"OtherContractsUnderReview" = "其他合同审核中";
+"Terminated" = "已完成";
+"CloseByLandlord" = "已拒绝";
+"CloseByTenant" = "对方已取消";
+"HasNoInvitation" = "租客的线上签约申请将在此处展示\n完成信息填写即可签约\n如有合适的租客可邀请对方进行签约申请";
+"Refuse" = "拒绝";
+"WhetherRefuseSignedInvite" = "是否拒绝此签约申请？";
+"WhetherDeleteNotes" = "是否删除此记录？";
+"Delete" = "删除";
+"NoOngoingSignedInviteTips" = "暂无进行中签约\n如有合适的租客可邀请对方进行签约申请";
+"NoTerminatedSignedInviteTips" = "暂无已完成签约";
+
+// 租客交易流程之信息填写
+"TenantSign" = "租客签约";
+"TenantSignExplanation" = "租客签约说明";
+"TenantExplanation" = "租客须知";
+"FillIn" = "信息填写";
+"BeChecking" = "等待审核";
+"OnlinePaymentSecurity" = "在线签约支付将获得更多保障";
+"MoreSignExplanation" = "更多详情请点击右上角“租客签约说明”";
+"Guarantee" = "保障";
+"TenantInfo" = "租客信息";
+"TenantInfoIsEmpty" = "租客信息不能为空";
+"FullName" = "姓名";
+"IDNumber" = "身份证号";
+"ConfirmTheFollowingInfo" = "●确认已看房并与房东就以下内容达成一致";
+"CheckInDate" = "入住日期";
+"CheckInDateTips" = "●最早为签约日期第二天";
+"CheckOutDate" = "退租日期";
+"CheckOutDateTips" = "●不可早于入住日期";
+"CheckInDateMustLaterThanToday" = "入住时间必须晚于今天";
+"CheckInDateMustEarlierThanCheckOutDate" = "搬出时间必须晚于入住时间";
+"PaymentMethodExplanation" = "默认付款为押一付三，可选择月付";
+"MonthlyPaymentAgreement" = "月付协议";
+"ChooseMonthlyPayment" = "我了解月付服务并选择使用";
+"PaymentMethod" = "付款方式";
+"MonthlyPayment" = "月付";
+"Rates" = "费率";
+"QuarterlyPayment" = "季付";
+"RatesTips" = "费率说明";
+"RatesExplanation" = "       交易成功后，我们会帮你一次性垫付房东要求的六个月房租租金，你则需要每月支付我们一定的金额（房租*费率）作为为你垫付所收取的利息。";
+"AdditionalInfo" = "补充信息";
+"Optional" = "选填";
+"AdditionalExample" = "如补充说明是否存在家电损坏、房屋破损的情况";
+"MoreOtherCases" = "更多其他情况";
+"Verify" = "确认";
+
+// 租客交易流程之合同确认
+"MoreRentalInfo" = "●以下是详细租住信息，请再次确认\n如有问题可返回修改或联系房东修改";
+"RentMoney" = "租金";
+"HouseType" = "类型";
+"FloorTips" = "楼层";
+"Area" = "面积"; //m²
+"Address" = "地址";
+"PaymentType" = "付款";
+"PaymentPerMonth" = "押一付一";
+"PaymentPerQuarter" = "押一付三";
+"ContractFee" = "保障费用";
+"InstalmentFee" = "月付利息";
+"InstalmentFeeRate" = "月付利率";
+"RentMoneyMonthly" = "月租";
+"PerMonth" = "/月";
+"MoreObjectInfo" = "请确认以下物件信息，如有疑问，联系房东修改";
+"ContractAgreement" = "合同重要条款";
+"TermsUserAgreement" = "用户协议条款";
+"EntryIntoForce" = "1、协议生效条件";
+"RegisteObligations" = "2、注册义务";
+"PrivacyPolicy" = "3、隐私制度";
+"ConfirmContract" = "确认合同";
+"ConfirmContractTips" = "完整合同请点击右上角菜单查看\n房东信息由107间联系房东补充并核实\n合同经107间审核通过后即生效";
+"ReadAndConfirmContractTips" = "我已确认完整合同并选择签约";
+"PleaseConfirmContract" = "请先确认完整合同";
+"ViewFullContract" = "查看完整合同";
+"RefillContract" = "重新填写合同";
+"InputLoginPassword" = "请输入登录密码";
+"ConfirmAgreeContract" = "确认同意合同，审核通过后即生效";
+"LandlordInfoChangedTips" = "黄色字体为房东新修改信息\n请重新对合同进行确认";
+
+// 房东交易流程之信息填写
+"LandlordSign" = "房东签约";
+"LandlordExplanation" = "出租须知";
+"LandlordSignExplanation" = "出租签约说明";
+"AdditionalLandlordSignInfo" = "补充及确认出租信息后即可完成线上签约\n更多详情请点击右上角“出租签约说明”";
+"MoreLeaseInfo" = "以下是详细出租信息，请再次确认";
+"MoneyMonthlyTips" = "请在此处填写你的确定月租金";
+"FullAddress" = "详细地址";
+"RoomType" = "类型";
+"MasterBedroom" = "主卧";
+"SecondaryBedroom" = "次卧";
+"ObjectInfo" = "物件信息";
+"LandlordMoreInfo" = "房间所属物及设施信息将被写进合同";
+"CollectMoneyMethod" = "收款方式";
+
+// 房东交易流程之合同确认
+"LandlordInfo" = "身份信息";
+"LandlordInfoIsEmpty" = "房东信息不能为空";
+"ProofOfLeaseQualifications" = "出租资质证明";
+"Sample" = "示例";
+"HousePermit" = "房屋所有权证";
+"HousePermitTips" = "能看清姓名、详细地址";
+"HouseContract" = "完整租房合同";
+"HouseContractTips" = "能看清双方姓名、地址、转租条款";
+"ProofOfLeaseQualificationsIsEmpty" = "请上传出租资格证明照片";
+"UploadPhotosOfDeedOrContract" = "上传房产证（如为业主）或租房合同（如为合租）照片，证明你的出租资质。";
+"ConfidentialInformationStatement" = "此信息为保密信息，仅作审核用";
+"ViewSample" = "查看示例";
+"MoreLeaseAndRentalInfo" = "以下是详细出租信息、租客信息，请再次确认";
+"TenantAdditionalInfo" = "租客补充";
+"LandlordAdditionalInfo" = "房东补充";
+"InfoWritedInContract" = "以下房子所属物及设施信息将被写进合同";
+"RefuseInvitation" = "拒绝签约";
+"WhetherRefuseInvitation" = "确定拒绝该租客邀约？";
+"TenantInfoChangedTips" = "黄色字体为租客新修改信息\n请重新对合同进行确认";
+
+// 审核状态
+"107RoomAuditing" = "已成功申请签约";
+"AuditWaitMessage" = "107间审核通过后合同将立即生效。生效后可查看完整合同内容，并可申请免费邮寄一份纸质版本";
+"ChangeContractInformation" = "更改合同填写信息";
+"AuditFailed" = "审核失败";
+"AuditCompleteFailed" = "审核彻底失败";
+"Reason" = "原因：";
+"AuditFailMessageRent" = "原因：租住信息填写有误，请修改后重新提交";
+"AuditFailMessageLease" = "原因：不具有出租资格，请修改后重新提交";
+"ChangeInformationAndReaudit" = "修改信息重新审核";
+"AuditSuccess" = "审核成功";
+"AuditSuccessMessageRent" = "恭喜你租房成功！你的合同已具有法律效力";
+"AuditSuccessMessageLease" = "房子成功租出！你的合同已具有法律效力";
+"RentManage" = "租住管理";
+"ViewContract" = "查看合同";
+"RentContract" = "租房合同";
+"AuditRefused" = "对方拒绝了此处签约交易\n该签约流程已中断";
+"Connect107Room" = "如有疑问请联系107间";
+
+// 合同管理
+"RentInfo" = "租住信息";
+"PendingCharges" = "即将到账";
+"PaymentMoney" = "支付租金";
+"TerminatedRent" = "提前退租";
+"OldExitTime" = "原退租时间";
+"ContractMoney" = "合同月租";
+"PayableMonthly" = "应付月租";
+"SigningRentalGuarantee" = "签约租住保障";
+"MoneyMonthly" = "月房租";
+"ContinueRent" = "我要续租";
+"CompletePayment" = "完成支付";
+
+// 出租管理
+"LeaseManage" = "出租管理";
+"LeaseInfo" = "出租信息";
+"CollectRent" = "收取租金";
+"CollectMethod" = "收款方式";
+"ManageRent" = "管理租金";
+
+// 支付页面
+"PayMoneyBalanceAccount" = "待付款结算";
+"GetMoneyBalanceAccount" = "待收款结算";
+"Total" = "合计";
+"MustCompletePaymentBefore%@" = "需在%@前完成支付";
+"EstimateMoneyArriveBefore%@" = "预计%@前到账";
+"Pay" = "支付";
+"PaymentPaying" = "账单支付中";
+"UseRedBag" = "使用红包";
+"UseBalance" = "使用账户余额";
+"PayMoney" = "支付金额";
+"ThirdPartyPayment" = "第三方支付";
+"UseOther" = "其他支付方式";
+"Alipay" = "支付宝";
+"WechatPay" = "微信支付";
+"UniPay" = "银联";
+"SelectOther" = "选择其他方式";
+"MaxPaymentCostTips" = "●当前支付金额较大，快捷支付可能超过限额\n建议将资金转入支付宝-余额宝，再进行支付\n或登录107间网页使用支付宝-网络银行支付";
+"CancelPayment" = "取消支付，重新选择红包/余额";
+"ViewLatestBill" = "查看最新账单";
+"PaySuccess" = "支付成功";
+"PayFailed" = "支付失败";
+"HasNoPendingCharges" = "历史账单已结清，当前无待收款项";
+"HasNoPayment" = "历史账单已结清，当前无待付款项";
+
+// 个人中心
+"UserAccount" = "个人账户";
+"MyAccount" = "我的账户";
+"AccountInfo" = "账户信息";
+"Subsidy" = "金额补贴";
+"AccountOrMobile" = "账户/手机号";
+"AuthenticationStatus" = "认证状态";
+"AfterAuthentication" = "认证后可以XXXXXXXXXXXXXXXX";
+"Authenticate" = "认证";
+"Identity" = "身份";
+"IdInfo" = "身份信息（交易必须信息）";
+"RealName" = "真实姓名";
+"IdNumber" = "身份证号";
+"Bind" = "绑定（网页端可用以下方式登录）";
+"BindAction" = "绑定";
+"UserNameOrEmail" = "用户名/邮箱";
+"Weibo" = "微博";
+"Douban" = "豆瓣";
+"AccountMoney" = "账户资金";
+"Wallet" = "钱包";
+"RedBag" = "红包";
+"Balance" = "余额";
+"ToPayBills" = "待付款项";
+"NoToPayBills" = "当前无待付款项";
+"PendingSettlement" = "待付款结算";
+"HistoryBalance" = "历史收支";
+"NoHistoryBalance" = "当前无历史账单记录";
+"CurrentAvailable" = "当前可用";
+"HistoryTotal" = "历史总额";
+"UsedAmount" = "已用金额";
+"CashAmount" = "提现金额";
+"RedBagBalanceDetails" = "红包收支明细";
+"RedBagUsage" = "红包使用说明";
+"RedBagUsageDetail" = "“红包”中的金额可在线上签约支付时使用。\n首次注册、成功认证、租期内无违约记录等情况107间或奖励红包。";
+"CashInstructions" = "提现说明";
+"AccountBalance" = "账户余额";
+"AccountDetails" = "账户明细";
+"Withdraw" = "提现";
+"WithdrawUsage" = "提现说明";
+"WithdrawUsageDetail" = "“余额”中的金额可在线上签约支付时使用，也可提现。\n提现方式支持用户本人的储蓄卡及支付宝。\n\n目前可绑定一张储蓄卡及一个支付宝账户。\n\n储蓄卡提现到账时间为1-3天。\n支付宝提现到账时间为1天内。";
+"RentBalanceDetail" = "租住收支明细";
+"WithdrawToDebitCard" = "提现到银行卡";
+"WithdrawToAlipay" = "提现到支付宝";
+"ArrivalTimeThreeDays" = "● 三天内到账";
+"WithdrawAll" = "全部提现";
+"AddDebitCard" = "添加银行卡";
+"AddAlipay" = "添加支付宝";
+"MaxWithdrawAmount" = "最多可提现";
+"DebitCard" = "银行卡";
+"Alipay" = "支付宝";
+"PleaseBindYourDebitCard" = "请绑定账户本人的卡";
+"PleaseBindYourAlipay" = "请绑定账户本人的支付宝帐户";
+"PleaseInputDebitCardNumber" = "请输入储蓄卡卡号";
+"PleaseInputAlipayNumber" = "请输入支付宝账号";
+"InputBankReservedInfo" = "请填写银行预留信息";
+"YourNameAndIdCardNumber" = "本人姓名及身份证号";
+"ConfirmIdentityInfo" = "确认与以下身份信息相符";
+"PleaseInputCardHolderName" = "请输入持卡人姓名";
+"AlipayCardHolderName" = "支付宝绑定人姓名";
+"PleaseInputIdCardNumber" = "请输入持卡人身份证号";
+"AlipayIdCardNumber" = "支付宝绑定人身份证号";
+"PleaseInputPassword" = "请输入登录密码";
+"PleaseInputAmount" = "请输入正确的金额";
+"BalanceHint" = "● 可用于支付房租，也可随时提现";
+"RedBagHint" = "● 可用于支付房租";
+"WithdrawSuccess" = "提现成功！";
+"WithdrawSuccessTips" = "预计3个工作日到账，请注意查收";
+
+// 发房
+"PostSuite" = "发布房子";
+"SuiteDraftTips" = "上次发房未完成，是否继续？";
+"WhetherToSave" = "是否保存当前修改？";
+"Save" = "保存";
+
+// 房子信息
+"HouseInfo" = "房子信息";
+"DuplicatedHouse" = "目前只能发布一套房源，是否进入“房子管理”？";
+"HouseInfoTips" = "●以下是房子的整体信息\n出租房子的详情请在下一页填写";
+"SuiteRegion" = "房源地区";
+"CountOfRenter" = "名租客正在找房";
+"CountOfSubscriber" = "人订阅了该地址\n发布后即刻推送给他们";
+"SuiteType" = "户型";
+"Room" = "室";
+"BedroomNumberIsZero" = "卧室数目不能为0";
+"AreaIsZero" = "请确认面积";
+"SuiteDescription" = "房源描述";
+"SuiteDescriptionIsEmpty" = "请添加房子详情描述";
+"SuiteDescriptionTips" = "介绍下你的房子，例如：房子吸引人的地方、交通和周边生活、入住时间、对租客的具体要求、注意事项等（卧室信息将在下一步添加）";
+"SuiteFacilities" = "房源设施";
+"ContactInfo" = "联系方式（至少添加一种联系方式）";
+"OtherContactInfo" = "其他联系方式";
+"WechatTips" = "输入你的微信号";
+"QQTips" = "输入你的QQ号";
+"RentalWay" = "出租方式";
+"Subletting" = "分租";
+"RequiredGender" = "出租限制";
+"MonthlyRent" = "每月租金";
+"RentMoneyIsEmpty" = "请输入正确的租金金额";
+"MonthlyRentTips" = "输入你的月租金";
+"AddPhotos" = "添加照片";
+"Kitchen" = "厨房";
+"LivingRoom" = "客厅";
+"Toilet" = "卫生间";
+"Other" = "其他";
+"VerifyInfo" = "确认信息";
+"CleanRooms" = "该房源关联的房子信息将被清除，是否确认该操作？";
+
+// 房间信息
+"RoomInfo" = "房间信息";
+"RoomInfoTips" = "以下是出租房间详情";
+"Bedroom" = "卧室";
+"AddBedroom" = "添加卧室";
+"OtherRoomPhotos" = "其他房间照片";
+"AddOtherPhotos" = "添加其他房间";
+"SaveInfo" = "保存信息";
+"Photo" = "照片";
+"Orientation" = "朝向";
+"PhotosIsEmpty" = "请添加至少一张照片";
+"Open" = "开放";
+"Closed" = "关闭";
+"RentStatus" = "状态";
+"InfoUpdated" = "信息已更新";
+
+// 等待审核
+"TotoroDetecting" = "T-Nega中介识别系统\n正在检测中...";
+"PostSuiteSuccess" = "发布成功！";
+"TotoroDetectSuccess" = "房子已通过“T-Nega中介识别系统”检测，进入人工审核，\n一个工作日内通知审核结果";
+"CountOfPusher" = "名附近租客将收到房子推送";
+"MoneyOfSuiteAllowance" = "元发房补贴将在审核后发放";
+"OptionalSignedDealInfoTips" = "以下信息为签约交易信息（选填）";
+
+// 邮寄纸质合同
+"SendContract" = "邮寄合同";
+"SendPaperContract" = "免费邮寄纸质合同";
+"SendPaperContractPrompt" = "● 填写以下基本信息\n我们会将盖有公章的正式纸质合同快递给你";
+"ReceiverAddress" = "收件人地址";
+"ReceiverInfo" = "收件人信息";
+"InputDetailAddress" = "输入详细地址";
+"InputReceiverName" = "输入收件人姓名";
+"InputReceiverPhone" = "输入收件人电话号码";
+"MailApplySuccess" = "邮寄申请成功";
+"ArriveTime" = "约3个工作日到达";
+
+//引导页启动页轮播
+"OneStopPlatform" = "一 站 式 互 联 网 租 住 平 台";
+"FindRoom" = "找房放心" ;
+"SmartFilterAndManualreview" = "智能过滤＋人工审核,杜绝一切中介" ;
+"InternetEenters" = "一站式互联网租房" ;
+"TradingRemindRepairBillSigned" = "签约 交易 提醒 账单 维修" ;
+"RentOutFromWorry" = "出租省心" ;
+"PushedToTheTenantInterest" = "发房后即刻推送给感兴趣的租客" ;
+"RentalConfidence" = "租住安心" ;
+"MultipleLevelsOfSecurity" = "多重安全保障,为你保驾护航" ;
+
+//版本升级
+"UpdateVersion" = "版本升级" ;
+"CurrentVersionStop" = "当前版本已经停止支持，必须升级到最新版本才能继续使用" ;
+"NewVewsion" = "检测到新版本" ;
+"AvailableNewVersion" = "有新的版本可供升级\n点击“升级”了解更多新版特点" ;
+"Update" = "升级" ;
+"logout" = "退出" ;
+"logoutTheLogin" = "退出登录" ;
+"ruSureLogout" = "是否退出当前账号" ;

@@ -226,16 +226,23 @@ static CGFloat priceFontSize = 15.0f;
                 {
                     SuiteSearchViewController *suiteSearchViewController = [[SuiteSearchViewController alloc] init];
                     [suiteSearchViewController setTitle:_memuArray[indexPath.section][@"values"][indexPath.row][@"name"]];
+                    [self.navigationController pushViewController:suiteSearchViewController animated:YES];
                 }
                     break;
                 case 1:
                 {
                     InterestSuiteViewController *interestSuiteViewController = [[InterestSuiteViewController alloc] init];
+                    [interestSuiteViewController setTitle:_memuArray[indexPath.section][@"values"][indexPath.row][@"name"]];
+                    [interestSuiteViewController setHeaderType:HeaderTypeWhiteBack];
+                    [self.navigationController pushViewController:interestSuiteViewController animated:YES];
                 }
                     break;
                 case 2:
                 {
                     RentalManageViewController *rentalManageViewController = [[RentalManageViewController alloc] init];
+                    [rentalManageViewController setTitle:_memuArray[indexPath.section][@"values"][indexPath.row][@"name"]];
+                    [rentalManageViewController setHeaderType:HeaderTypeWhiteBack];
+                    [self.navigationController pushViewController:rentalManageViewController animated:YES];
                 }
                     break;
                 default:
@@ -247,11 +254,17 @@ static CGFloat priceFontSize = 15.0f;
                 case 0:
                 {
                     PostSuiteViewController *postSuiteViewController = [[PostSuiteViewController alloc] init];
+                    [postSuiteViewController setTitle:_memuArray[indexPath.section][@"values"][indexPath.row][@"name"]];
+                    [postSuiteViewController setHeaderType:HeaderTypeWhiteBack];
+                    [self.navigationController pushViewController:postSuiteViewController animated:YES];
                 }
                     break;
                 case 1:
                 {
                     PostSuiteManageViewController *postSuiteManageViewController = [[PostSuiteManageViewController alloc] init];
+                    [postSuiteManageViewController setTitle:_memuArray[indexPath.section][@"values"][indexPath.row][@"name"]];
+                    [postSuiteManageViewController setHeaderType:HeaderTypeWhiteBack];
+                    [self.navigationController pushViewController:postSuiteManageViewController animated:YES];
                 }
                     break;
                 default:

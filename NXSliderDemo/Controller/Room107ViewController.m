@@ -44,28 +44,28 @@
     
     [self.view setBackgroundColor:[UIColor room107ViewBackgroundColor]];
 
-    _leftButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage makeImageFromText:@"\ue60c" font:[UIFont room107FontFour] color:[UIColor whiteColor]] style:UIBarButtonItemStylePlain target:self action:@selector(leftBarButtonDidClick:)];
+//    _leftButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage makeImageFromText:@"\ue60c" font:[UIFont room107FontFour] color:[UIColor whiteColor]] style:UIBarButtonItemStylePlain target:self action:@selector(leftBarButtonDidClick:)];
     switch (_headerType) {
         case HeaderTypeNone:
             break;
         case HeaderTypeGreenBack:
-            [_leftButtonItem setImage:[UIImage makeImageFromText:@"\ue60c" font:[UIFont room107FontFour] color:[UIColor room107GreenColor]]];
+//            [_leftButtonItem setImage:[UIImage makeImageFromText:@"\ue60c" font:[UIFont room107FontFour] color:[UIColor room107GreenColor]]];
             break;
         case HeaderTypeWhiteBack:
-            [_leftButtonItem setImage:[UIImage makeImageFromText:@"\ue60c" font:[UIFont room107FontFour] color:[UIColor whiteColor]]];
+//            [_leftButtonItem setImage:[UIImage makeImageFromText:@"\ue60c" font:[UIFont room107FontFour] color:[UIColor whiteColor]]];
             break;
         case HeaderTypeWhiteMenu:
-            [_leftButtonItem setImage:[UIImage makeImageFromText:@"\ue611" font:[UIFont room107FontFour] color:[UIColor whiteColor]]];
-//            _leftButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage makeImageFromText:@"\ue611" font:[UIFont room107FontFour] color:[UIColor whiteColor]] style:UIBarButtonItemStylePlain target:self action:@selector(leftBarButtonDidClick:)];
-//            self.navigationItem.leftBarButtonItem = _leftButtonItem;
+//            [_leftButtonItem setImage:[UIImage makeImageFromText:@"\ue611" font:[UIFont room107FontFour] color:[UIColor whiteColor]]];
+            _leftButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage makeImageFromText:@"\ue611" font:[UIFont room107FontFour] color:[UIColor whiteColor]] style:UIBarButtonItemStylePlain target:self action:@selector(leftBarButtonDidClick:)];
+            self.navigationItem.leftBarButtonItem = _leftButtonItem;
             break;
         default:
             break;
     }
-    self.navigationItem.leftBarButtonItem = _leftButtonItem;
-    // 弥补因为返回按钮被替换导致的边缘滑入手势失效的问题
-    UIPanGestureRecognizer *viewPanGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(leftBarButtonDidClick:)];
-    [self.view addGestureRecognizer:viewPanGesture];
+//    self.navigationItem.leftBarButtonItem = _leftButtonItem;
+//    // 弥补因为返回按钮被替换导致的边缘滑入手势失效的问题
+//    UIPanGestureRecognizer *viewPanGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(leftBarButtonDidClick:)];
+//    [self.view addGestureRecognizer:viewPanGesture];
 
     _rightButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:self action:@selector(rightBarButtonDidClick:)];
     _rightButtonItem.enabled = NO;

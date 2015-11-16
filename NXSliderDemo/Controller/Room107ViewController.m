@@ -63,6 +63,9 @@
             break;
     }
     self.navigationItem.leftBarButtonItem = _leftButtonItem;
+    // 弥补因为返回按钮被替换导致的边缘滑入手势失效的问题
+    UIPanGestureRecognizer *viewPanGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(leftBarButtonDidClick:)];
+    [self.view addGestureRecognizer:viewPanGesture];
 
     _rightButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:self action:@selector(rightBarButtonDidClick:)];
     _rightButtonItem.enabled = NO;

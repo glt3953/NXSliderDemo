@@ -76,6 +76,7 @@ static CGFloat DistanceOfLeftView = 50;
 
 - (void)resetCenterViewController:(Room107ViewController *)viewController {
     _centerViewController = viewController;
+    [_centerViewController setHeaderType:HeaderTypeWhiteMenu];
     if (!_homeNavigationController) {
         _homeNavigationController = [[UINavigationController alloc] init];
         //    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
@@ -97,7 +98,6 @@ static CGFloat DistanceOfLeftView = 50;
     
     UIPanGestureRecognizer *viewPanGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(viewMoved:)];
     [_centerView addGestureRecognizer:viewPanGesture];
-    [_centerViewController setHeaderType:HeaderTypeWhiteMenu];
 }
 
 - (CGSize)mainScreenSize {

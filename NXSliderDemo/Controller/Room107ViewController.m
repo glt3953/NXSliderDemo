@@ -103,6 +103,8 @@
     return [self heightOfNavigationBar] + [self spacingY] + 2 * [self spacingY];
 }
 
+- (void)backToPrev:(UIPanGestureRecognizer *)gestureRecognizer {
+}
 
 - (IBAction)leftBarButtonDidClick:(id)sender {
     if (_headerType == HeaderTypeWhiteMenu) {

@@ -13,9 +13,9 @@
 //#import "LoginOrRegisterViewController.h"
 //#import "AuthenticateViewController.h"
 #import "SearchTipLabel.h"
-//#import "SCGIFImageView.h"
+#import "SCGIFImageView.h"
 //#import "HistoryBalanceViewController.h"
-//#import "Room107GradientLayer.h"
+#import "Room107GradientLayer.h"
 //#import "NSNumber+Additions.h"
 //#import "SystemAgent.h"
 //#import "MessageDetailViewController.h"
@@ -56,6 +56,8 @@
             break;
         case HeaderTypeWhiteMenu:
             [_leftButtonItem setImage:[UIImage makeImageFromText:@"\ue611" font:[UIFont room107FontFour] color:[UIColor whiteColor]]];
+//            _leftButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage makeImageFromText:@"\ue611" font:[UIFont room107FontFour] color:[UIColor whiteColor]] style:UIBarButtonItemStylePlain target:self action:@selector(leftBarButtonDidClick:)];
+//            self.navigationItem.leftBarButtonItem = _leftButtonItem;
             break;
         default:
             break;
@@ -68,40 +70,10 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    
-    _isVisible = YES;
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
-    
-    _isVisible = NO;
-}
-
-- (void)showMessageDetail:(NSNotification *)notification {
-    if (!_isVisible) {
-        return;
-    }
-
-    _messageInfo = [notification object][@"message"];
-    if ([[notification object][@"applicationState"] integerValue] == UIApplicationStateActive) {
-        //程序当前正处于前台
-        _messageAlertView = [[UIAlertView alloc] initWithTitle:_messageInfo[@"title"]
-                                                                   message:_messageInfo[@"content"]
-                                                                  delegate:self
-                                                         cancelButtonTitle:lang(@"Cancel")
-                                                         otherButtonTitles:[lang(@"ViewSample") substringToIndex:2], nil];
-        [_messageAlertView show];
-    } else if([[notification object][@"applicationState"] integerValue] == UIApplicationStateInactive || [[notification object][@"applicationState"] integerValue] == UIApplicationStateBackground) {
-        //程序处于后台
-        [self showMessageDetailViewController];
-    }
-}
-
-- (void)showMessageDetailViewController {
-//    MessageDetailViewController *messageDetailViewController = [[MessageDetailViewController alloc] initWithMessageID:_messageInfo[@"messageId"]];
-//    [self presentViewController:messageDetailViewController animated:YES completion:^{
-//    }];
 }
 
 - (void)setHeaderType:(HeaderType)type {
@@ -185,6 +157,38 @@
     [self.view bringSubviewToFront:_contentLabel];
     
     return _contentLabel;
+}
+
+- (void)showLoadingView {
+    if (!_loadingView) {
+        [self createLoadingView];
+    }
+    
+    [[App window] bringSubviewToFront:_loadingView];
+    _loadingView.hidden = NO;
+    
+    //    [self performSelector:@selector(hideLoadingView) withObject:nil afterDelay:5];
+    //    [NSTimer scheduledTimerWithTimeInterval:5.0f target:self selector:@selector(hideLoadingView) userInfo:nil repeats:NO];
+}
+
+- (void)createLoadingView {
+    //网络加载Loading
+    CGRect frame = [[UIScreen mainScreen] bounds];
+    //    frame.origin.y = statusBarHeight + [self heightOfNavigationBar];
+    //    frame.size.height -= frame.origin.y;
+    _loadingView = [[UIView alloc] initWithFrame:frame];
+    Room107GradientLayer *gradientLayer = [[Room107GradientLayer alloc] initWithFrame:[_loadingView bounds] andStartAlpha:0.3f andEndAlpha:0.3f];
+    [_loadingView.layer insertSublayer:gradientLayer atIndex:0];
+    _loadingView.hidden = YES;
+    [[App window] addSubview:_loadingView]; //铺满整个屏幕
+    
+    CGFloat imageViewWidth = 100;
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"loading.gif" ofType:nil];
+    NSData *imageData = [NSData dataWithContentsOfFile:filePath];
+    SCGIFImageView *loadingImageView = [[SCGIFImageView alloc] initWithFrame:(CGRect){0, 0, imageViewWidth, imageViewWidth}];
+    loadingImageView.center = CGPointMake(_loadingView.frame.size.width / 2, _loadingView.frame.size.height / 2);
+    [loadingImageView setData:imageData];
+    [_loadingView addSubview:loadingImageView];
 }
 
 - (void)hideLoadingView {

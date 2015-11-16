@@ -37,18 +37,5 @@ typedef enum {
 - (CGFloat)menuOriginX;
 - (void)showOrHideMenu;
 - (void)showAlertViewWithTitle:(NSString *)title message:(NSString *)message;
-- (void)viewTenantExplanation; //租客说明
-- (void)viewLandlordExplanation; //出租说明
-- (void)viewPricingRules; //定价规则
-- (void)viewContractBycontractID:(NSNumber *)contractID; //查看合同
-- (void)sendContractBycontractID:(NSNumber *)contractID; //邮寄合同
-- (void)viewHistoryPayment; //历史账单
-- (void)viewRepairExplanation; //维修申请
-- (void)viewAppealsBreach; //违约申诉
-- (void)viewSignExplanation; //签约说明
-- (void)viewProtocalExplanation; //用户协议
-- (void)viewMonthlyPaymentExplanation; //月付协议
-- (void)viewWalletExplanation; //钱包说明
-- (void)viewPaymentExplanation; //支付说明
 
 @end

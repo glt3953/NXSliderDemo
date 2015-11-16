@@ -42,28 +42,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NXSliderDemo/Controller/Room107ViewController.m"
-            timestampString = "469338757.26131"
+            timestampString = "469340644.405006"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "141"
-            endingLineNumber = "141"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
             landmarkName = "-rightBarButtonDidClick:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "NXSliderDemo/Controller/Room107ViewController.m"
-            timestampString = "469338757.26131"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "136"
-            endingLineNumber = "136"
-            landmarkName = "-leftBarButtonDidClick:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

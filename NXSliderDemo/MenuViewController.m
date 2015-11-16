@@ -119,13 +119,15 @@
                 case 1:
                 {
                     InterestSuiteViewController *interestSuiteViewController = [[InterestSuiteViewController alloc] init];
-//                    [[NSNotificationCenter defaultCenter] postNotificationName:SideslipCenterViewControllerDidChangeNotification object:interestSuiteViewController];
+                    [interestSuiteViewController setTitle:_memuArray[indexPath.section][@"values"][indexPath.row][@"name"]];
+                    [[NSNotificationCenter defaultCenter] postNotificationName:SideslipCenterViewControllerDidChangeNotification object:interestSuiteViewController];
                 }
                     break;
                 case 2:
                 {
                     RentalManageViewController *rentalManageViewController = [[RentalManageViewController alloc] init];
-//                    [[NSNotificationCenter defaultCenter] postNotificationName:SideslipCenterViewControllerDidChangeNotification object:rentalManageViewController];
+                    [rentalManageViewController setTitle:_memuArray[indexPath.section][@"values"][indexPath.row][@"name"]];
+                    [[NSNotificationCenter defaultCenter] postNotificationName:SideslipCenterViewControllerDidChangeNotification object:rentalManageViewController];
                 }
                     break;
                 default:
@@ -137,13 +139,15 @@
                 case 0:
                 {
                     PostSuiteViewController *postSuiteViewController = [[PostSuiteViewController alloc] init];
-//                    [[NSNotificationCenter defaultCenter] postNotificationName:SideslipCenterViewControllerDidChangeNotification object:postSuiteViewController];
+                    [postSuiteViewController setTitle:_memuArray[indexPath.section][@"values"][indexPath.row][@"name"]];
+                    [[NSNotificationCenter defaultCenter] postNotificationName:SideslipCenterViewControllerDidChangeNotification object:postSuiteViewController];
                 }
                     break;
                 case 1:
                 {
                     PostSuiteManageViewController *postSuiteManageViewController = [[PostSuiteManageViewController alloc] init];
-//                    [[NSNotificationCenter defaultCenter] postNotificationName:SideslipCenterViewControllerDidChangeNotification object:postSuiteManageViewController];
+                    [postSuiteManageViewController setTitle:_memuArray[indexPath.section][@"values"][indexPath.row][@"name"]];
+                    [[NSNotificationCenter defaultCenter] postNotificationName:SideslipCenterViewControllerDidChangeNotification object:postSuiteManageViewController];
                 }
                     break;
                 default:

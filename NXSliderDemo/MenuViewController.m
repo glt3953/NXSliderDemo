@@ -48,7 +48,7 @@
 }
 
 - (UIView *)createTableFooterView {
-    UIView *footerView = [[UIView alloc] initWithFrame:(CGRect){0, CGRectGetHeight(self.view.bounds) - 80.0f, CGRectGetWidth(self.view.bounds), 80.0f}];
+    UIView *footerView = [[UIView alloc] initWithFrame:(CGRect){0, 0, CGRectGetWidth(self.view.bounds), 80.0f}];
     [footerView setBackgroundColor:[UIColor clearColor]];
     
     CGFloat originX = 22.0f;
@@ -93,28 +93,23 @@
 
 - (IBAction)messageButtonDidClick:(id)sender {
     MessageListViewController *messageListViewController = [[MessageListViewController alloc] init];
-    [[NSNotificationCenter defaultCenter] postNotificationName:SideslipCenterViewControllerDidChangeNotification object:messageListViewController];
-    //    [messageListViewController setHeaderType:HeaderTypeGreenAndBack];
-    //    [self presentViewController:messageListViewController animated:YES completion:^{
-    //    }];
+    [messageListViewController setTitle:@"消息"];
+    [[NSNotificationCenter defaultCenter] postNotificationName:SideslipShowCenterViewNotification object:messageListViewController];
+    [self.navigationController pushViewController:messageListViewController animated:YES];
 }
 
 - (IBAction)suggestionButtonDidClick:(id)sender {
     SuggestionViewController *suggestionViewController = [[SuggestionViewController alloc] init];
-    [[NSNotificationCenter defaultCenter] postNotificationName:SideslipCenterViewControllerDidChangeNotification object:suggestionViewController];
-    //    [suggestionViewController setHeaderType:HeaderTypeGreenAndBack];
-    //    [self presentViewController:suggestionViewController animated:YES completion:^{
-    //
-    //    }];
+    [suggestionViewController setTitle:@"建议"];
+    [[NSNotificationCenter defaultCenter] postNotificationName:SideslipShowCenterViewNotification object:suggestionViewController];
+    [self.navigationController pushViewController:suggestionViewController animated:YES];
 }
 
 - (IBAction)aboutButtonDidClick:(id)sender {
     AboutViewController *aboutViewController = [[AboutViewController alloc] init];
-    [[NSNotificationCenter defaultCenter] postNotificationName:SideslipCenterViewControllerDidChangeNotification object:aboutViewController];
-    //    [aboutViewController setHeaderType:HeaderTypeGreenAndBack];
-    //    [self presentViewController:aboutViewController animated:YES completion:^{
-    //        
-    //    }];
+    [aboutViewController setTitle:@"关于"];
+    [[NSNotificationCenter defaultCenter] postNotificationName:SideslipShowCenterViewNotification object:aboutViewController];
+    [self.navigationController pushViewController:aboutViewController animated:YES];
 }
 
 #pragma mark - UITableViewDataSource

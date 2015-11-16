@@ -86,6 +86,7 @@ static CGFloat DistanceOfLeftView = 50;
         [_homeNavigationController.navigationBar setTranslucent:NO];
 //        [_homeNavigationController setViewControllers:@[_centerViewController]];
 //        NSLog(@"_homeNavigationController.viewControllers:%@", _homeNavigationController.viewControllers);
+        _leftViewController.navigationController = _homeNavigationController;
     }
     if (_centerView) {
         [_centerView removeFromSuperview];

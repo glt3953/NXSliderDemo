@@ -47,6 +47,9 @@
         tabBarItem.titlePositionAdjustment = UIOffsetMake(0, -2);
     }];
 //    tabBarViewController.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
+    //动态改变Frame
+//    CGRect frame = CGRectMake(0, CGRectGetHeight([[UIScreen mainScreen] bounds]) - navigationBarHeight, CGRectGetWidth([[UIScreen mainScreen] bounds]), navigationBarHeight);
+//    tabBarViewController.tabBar.frame = frame;
     
     return tabBarViewController;
 }

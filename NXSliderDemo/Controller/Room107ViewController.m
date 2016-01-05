@@ -43,7 +43,7 @@
     // Do any additional setup after loading the view.
     
     [self.view setBackgroundColor:[UIColor room107ViewBackgroundColor]];
-
+    
 //    UIButton *backButton = [[UIButton alloc] initWithFrame:(CGRect){0, 0, 30, 30}];
 //    [backButton.titleLabel setFont:[UIFont room107FontFour]];
 //    [backButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
@@ -78,12 +78,20 @@
     _rightButtonItem.enabled = NO;
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    self.hidesBottomBarWhenPushed = YES;
+}
+
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
+    
+    self.hidesBottomBarWhenPushed = NO;
 }
 
 - (void)setHeaderType:(HeaderType)type {

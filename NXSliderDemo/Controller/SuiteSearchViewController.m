@@ -17,6 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [self setTitle:@"搜索房子"];
 }
 
 - (void)didReceiveMemoryWarning {

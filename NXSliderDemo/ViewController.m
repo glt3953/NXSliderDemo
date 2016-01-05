@@ -36,7 +36,7 @@ static CGFloat priceFontSize = 15.0f;
     // Do any additional setup after loading the view, typically from a nib.
 
     [self.view setBackgroundColor:[UIColor lightGrayColor]];
-    [self setTitle:@"主页"];
+    [self setTitle:@"107间"];
     
     NSMutableDictionary *personalDictionary = [[NSMutableDictionary alloc] initWithObjectsAndKeys:@"个人", @"name", [[NSMutableArray alloc] initWithObjects:@{@"icon":@"1", @"name":@"主页"}, nil], @"values", nil];
     NSMutableDictionary *renterDictionary = [[NSMutableDictionary alloc] initWithObjectsAndKeys:@"租客", @"name", [[NSMutableArray alloc] initWithObjects:@{@"icon":@"1", @"name":@"我的找房"}, @{@"icon":@"1", @"name":@"目标房间"}, @{@"icon":@"1", @"name":@"租住管理"}, nil], @"values", nil];
@@ -44,7 +44,7 @@ static CGFloat priceFontSize = 15.0f;
     _memuArray = [[NSMutableArray alloc] initWithObjects:personalDictionary, renterDictionary, landlordDictionary, nil];
     
     CGRect frame = self.view.frame;
-    frame.size.height -= tabBarHeight;
+    frame.size.height -= statusBarHeight + navigationBarHeight;
     _menuTableView = [[UITableView alloc] initWithFrame:frame style:UITableViewStyleGrouped];
     [_menuTableView setBackgroundColor:[UIColor clearColor]];
     _menuTableView.delegate = self;

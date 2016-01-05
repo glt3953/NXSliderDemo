@@ -23,7 +23,19 @@
     NSArray *viewControllerConfigs = @[@{@"identifier":@"ViewController", @"title":@"个人", @"image":@"\ue64d", @"badgeValue":@"123"}, @{@"identifier":@"SuiteSearchViewController", @"title":@"找房", @"image":@"\ue61a", @"badgeValue":@"1"}, @{@"identifier":@"PostSuiteManageViewController", @"title":@"出租", @"image":@"\ue64c", @"badgeValue":@""}];
     NSMutableArray *viewControllers = [[NSMutableArray alloc] init];
     for (NSDictionary *config in viewControllerConfigs) {
-        [viewControllers addObject:[[NSClassFromString(config[@"identifier"]) alloc] init]];
+        UIViewController *viewController = [[NSClassFromString(config[@"identifier"]) alloc] init];
+        
+        //每个ChildViewController增加一个UINavigationController
+        UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
+        [navigationController.navigationBar setBarTintColor:[UIColor room107GreenColor]];
+        navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName:[UIColor whiteColor], NSFontAttributeName:[UIFont room107FontFour]};//控制标题的样式
+        [navigationController.navigationBar setTintColor:[UIColor whiteColor]];//控制返回按钮的样式
+        [navigationController.navigationBar setTranslucent:NO];
+        //取消navigationBar底部阴影线
+        //    [homeNavigationController.navigationBar lt_setBackgroundColor:[UIColor clearColor]];
+        [navigationController.navigationBar setShadowImage:[UIImage new]];
+
+        [viewControllers addObject:navigationController];
     }
     tabBarViewController.viewControllers = viewControllers;
     
@@ -44,7 +56,8 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
     //设置控制器为Window的根控制器
-    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[self mainViewController]];
+//    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[self mainViewController]];
+    self.window.rootViewController = [self mainViewController];
     //    self.window.rootViewController = [[NXSliderViewController alloc] init];
     [self.window makeKeyAndVisible];
     

@@ -13,6 +13,7 @@ static NSString *imageView2Thumbnails = @"?imageView2/0/h/";
 static NSString *imageMogr2Thumbnails = @"?imageMogr2/thumbnail/";
 static const CGFloat statusBarHeight = 20.0f;
 static const CGFloat navigationBarHeight = 44.0f;
+static const CGFloat tabBarHeight = 49;
 static NSString *fontIconName = @"107RoomIcon";
 static NSString *dateFormatForJSON = @"yyyyMMdd";
 static NSString *htmlURI = @"room107://html";

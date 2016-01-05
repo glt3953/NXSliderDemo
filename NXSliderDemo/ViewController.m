@@ -43,7 +43,9 @@ static CGFloat priceFontSize = 15.0f;
     NSMutableDictionary *landlordDictionary = [[NSMutableDictionary alloc] initWithObjectsAndKeys:@"房东", @"name", [[NSMutableArray alloc] initWithObjects:@{@"icon":@"1", @"name":@"发房页"}, @{@"icon":@"1", @"name":@"发房管理"}, nil], @"values", nil];
     _memuArray = [[NSMutableArray alloc] initWithObjects:personalDictionary, renterDictionary, landlordDictionary, nil];
     
-    _menuTableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStyleGrouped];
+    CGRect frame = self.view.frame;
+    frame.size.height -= tabBarHeight;
+    _menuTableView = [[UITableView alloc] initWithFrame:frame style:UITableViewStyleGrouped];
     [_menuTableView setBackgroundColor:[UIColor clearColor]];
     _menuTableView.delegate = self;
     _menuTableView.dataSource = self;

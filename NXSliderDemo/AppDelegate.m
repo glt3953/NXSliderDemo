@@ -19,9 +19,42 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-//    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:[[NXSliderViewController alloc] init]];
-    self.window.rootViewController = [[NXSliderViewController alloc] init];
-//    self.window.rootViewController = navigationController;
+    //a.初始化一个tabBar控制器
+    UITabBarController *tb = [[UITabBarController alloc] init];
+    tb.tabBar.tintColor = [UIColor room107GreenColor];
+    //设置控制器为Window的根控制器
+    self.window.rootViewController = tb;
+//    self.window.rootViewController = [[NXSliderViewController alloc] init];
+    //b.创建子控制器
+    UIViewController *c1=[[UIViewController alloc]init];
+    c1.view.backgroundColor=[UIColor greenColor];
+    c1.tabBarItem.title=@"个人";
+    c1.tabBarItem.image = [UIImage makeImageFromText:@"\ue64d" font:[UIFont room107FontFive] color:[UIColor room107GreenColor]];
+    c1.tabBarItem.badgeValue=@"123";
+    c1.tabBarItem.titlePositionAdjustment = UIOffsetMake(0, -2);
+    
+    UIViewController *c2=[[UIViewController alloc]init];
+    c2.view.backgroundColor=[UIColor brownColor];
+    c2.tabBarItem.title=@"找房";
+    c2.tabBarItem.image=[UIImage makeImageFromText:@"\ue61a" font:[UIFont room107FontFive] color:[UIColor room107GreenColor]];
+    c2.tabBarItem.badgeValue=@"1";
+    c2.tabBarItem.titlePositionAdjustment = UIOffsetMake(0, -2);
+    
+    UIViewController *c3=[[UIViewController alloc]init];
+    c3.view.backgroundColor=[UIColor grayColor];
+    c3.tabBarItem.title=@"出租";
+    c3.tabBarItem.image=[UIImage makeImageFromText:@"\ue64c" font:[UIFont room107FontFive] color:[UIColor room107GreenColor]];
+    c3.tabBarItem.badgeValue=@"";
+    c3.tabBarItem.titlePositionAdjustment = UIOffsetMake(0, -2);
+    
+    //c.添加子控制器到ITabBarController中
+    //c.1第一种方式
+    //    [tb addChildViewController:c1];
+    //    [tb addChildViewController:c2];
+    
+    //c.2第二种方式
+    tb.viewControllers=@[c1, c2, c3];
+    
     [self.window makeKeyAndVisible];
     
     // 改变 StatusBar 颜色

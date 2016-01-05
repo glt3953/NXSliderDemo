@@ -96,7 +96,7 @@ static CGFloat priceFontSize = 15.0f;
 }
 
 - (IBAction)buttonDidClick:(id)sender {
-//    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"itms-apps://itunes.apple.com/cn/app/wei/id414478124"]]; //跳转至App Store
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://itunes.apple.com/cn/app/107jian-yi-zhan-shi-wu-zhong/id1018561608"]]; //跳转至App Store https://itunes.apple.com/cn/app/107jian-yi-zhan-shi-wu-zhong/id1018561608?mt=8   itms-apps://itunes.apple.com/cn/app/107jian-yi-zhan-shi-wu-zhong/id1018561608?mt=8
     
 //    NSLog(@"self.navigationController:%@", self.navigationController);
     FirstPushViewController *firstPushViewController = [[FirstPushViewController alloc] init];

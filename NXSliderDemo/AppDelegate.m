@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 //#import "NXSliderViewController.h"
+#import "UITabBar+Badge.h"
 
 @interface AppDelegate () <UITabBarControllerDelegate>
 
@@ -42,11 +43,16 @@
     }
     tabBarController.viewControllers = viewControllers;
     
-    [tabBarController.tabBar.items enumerateObjectsUsingBlock:^(UITabBarItem *tabBarItem, NSUInteger idx, BOOL *stop) {
-        NSDictionary *config = [_viewControllerConfigs objectAtIndex:idx];
+    [tabBarController.tabBar.items enumerateObjectsUsingBlock:^(UITabBarItem *tabBarItem, NSUInteger index, BOOL *stop) {
+        NSDictionary *config = [_viewControllerConfigs objectAtIndex:index];
         tabBarItem.title = config[@"title"];
-        tabBarItem.image = [UIImage makeImageFromText:config[@"image"] font:[UIFont room107FontFive] color:[UIColor room107GreenColor]];
-        tabBarItem.badgeValue = config[@"badgeValue"];
+        tabBarItem.image = [UIImage makeImageFromText:config[@"image"] font:[UIFont room107FontFive] color:[UIColor room107GrayColorC]];
+        tabBarItem.selectedImage = [UIImage makeImageFromText:config[@"image"] font:[UIFont room107FontFive] color:[UIColor room107GreenColor]];
+//        tabBarItem.badgeValue = config[@"badgeValue"];
+        //显示
+        [tabBarController.tabBar showBadgeOnItemIndex:index];
+        //隐藏
+//        [tabBarController.tabBar hideBadgeOnItemIndex:index];
         tabBarItem.titlePositionAdjustment = UIOffsetMake(0, -2);
     }];
 //    tabBarViewController.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];

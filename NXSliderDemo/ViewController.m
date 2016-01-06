@@ -217,6 +217,7 @@ static CGFloat priceFontSize = 15.0f;
         case 0:
         {
             ViewController *viewController = [[ViewController alloc] init];
+            viewController.hidesBottomBarWhenPushed = YES; //具体到每一次push都需要设置
             [viewController setTitle:_memuArray[indexPath.section][@"values"][indexPath.row][@"name"]];
             [viewController setHeaderType:HeaderTypeWhiteBack];
             [self.navigationController pushViewController:viewController animated:YES];
@@ -232,6 +233,7 @@ static CGFloat priceFontSize = 15.0f;
                 case 0:
                 {
                     SuiteSearchViewController *suiteSearchViewController = [[SuiteSearchViewController alloc] init];
+                    suiteSearchViewController.hidesBottomBarWhenPushed = YES;
                     [suiteSearchViewController setTitle:_memuArray[indexPath.section][@"values"][indexPath.row][@"name"]];
                     [self.navigationController pushViewController:suiteSearchViewController animated:YES];
                 }
@@ -239,6 +241,7 @@ static CGFloat priceFontSize = 15.0f;
                 case 1:
                 {
                     InterestSuiteViewController *interestSuiteViewController = [[InterestSuiteViewController alloc] init];
+                    interestSuiteViewController.hidesBottomBarWhenPushed = YES;
                     [interestSuiteViewController setTitle:_memuArray[indexPath.section][@"values"][indexPath.row][@"name"]];
                     [interestSuiteViewController setHeaderType:HeaderTypeWhiteBack];
                     [self.navigationController pushViewController:interestSuiteViewController animated:YES];
@@ -247,6 +250,7 @@ static CGFloat priceFontSize = 15.0f;
                 case 2:
                 {
                     RentalManageViewController *rentalManageViewController = [[RentalManageViewController alloc] init];
+                    rentalManageViewController.hidesBottomBarWhenPushed = YES;
                     [rentalManageViewController setTitle:_memuArray[indexPath.section][@"values"][indexPath.row][@"name"]];
                     [rentalManageViewController setHeaderType:HeaderTypeWhiteBack];
                     [self.navigationController pushViewController:rentalManageViewController animated:YES];
@@ -261,6 +265,7 @@ static CGFloat priceFontSize = 15.0f;
                 case 0:
                 {
                     PostSuiteViewController *postSuiteViewController = [[PostSuiteViewController alloc] init];
+                    postSuiteViewController.hidesBottomBarWhenPushed = YES;
                     [postSuiteViewController setTitle:_memuArray[indexPath.section][@"values"][indexPath.row][@"name"]];
                     [postSuiteViewController setHeaderType:HeaderTypeWhiteBack];
                     [self.navigationController pushViewController:postSuiteViewController animated:YES];
@@ -269,6 +274,7 @@ static CGFloat priceFontSize = 15.0f;
                 case 1:
                 {
                     PostSuiteManageViewController *postSuiteManageViewController = [[PostSuiteManageViewController alloc] init];
+                    postSuiteManageViewController.hidesBottomBarWhenPushed = YES;
                     [postSuiteManageViewController setTitle:_memuArray[indexPath.section][@"values"][indexPath.row][@"name"]];
                     [postSuiteManageViewController setHeaderType:HeaderTypeWhiteBack];
                     [self.navigationController pushViewController:postSuiteManageViewController animated:YES];

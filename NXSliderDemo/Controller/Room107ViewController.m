@@ -78,20 +78,12 @@
     _rightButtonItem.enabled = NO;
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    
-    self.hidesBottomBarWhenPushed = YES;
-}
-
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
-    
-    self.hidesBottomBarWhenPushed = NO;
 }
 
 - (void)setHeaderType:(HeaderType)type {

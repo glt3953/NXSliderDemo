@@ -10,5 +10,7 @@
 
 @interface ViewController : Room107ViewController
 
+- (instancetype)init;
+
 @end
 

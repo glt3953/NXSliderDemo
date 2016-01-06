@@ -17,8 +17,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+}
+
+- (instancetype)init {
+    self = [super init];
     
-    [self setTitle:@"搜索房子"];
+    if (self) {
+        [self setTitle:@"搜索房子"];
+    }
+    
+    return self;
 }
 
 - (void)didReceiveMemoryWarning {

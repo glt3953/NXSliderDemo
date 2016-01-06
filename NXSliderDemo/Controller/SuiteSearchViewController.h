@@ -10,4 +10,6 @@
 
 @interface SuiteSearchViewController : Room107ViewController
 
+- (instancetype)init;
+
 @end

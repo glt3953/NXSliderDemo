@@ -9,20 +9,23 @@
 #import "AppDelegate.h"
 //#import "NXSliderViewController.h"
 
-@interface AppDelegate ()
+@interface AppDelegate () <UITabBarControllerDelegate>
+
+@property (nonatomic, strong) NSArray *viewControllerConfigs;
 
 @end
 
 @implementation AppDelegate
 
 - (UIViewController *)mainViewController {
-    UITabBarController *tabBarViewController = [[UITabBarController alloc] init];
-    tabBarViewController.tabBar.barTintColor = [UIColor whiteColor]; //背景色
-    tabBarViewController.tabBar.tintColor = [UIColor room107GreenColor]; //选中色
+    UITabBarController *tabBarController = [[UITabBarController alloc] init];
+//    tabBarController.delegate = self;
+    tabBarController.tabBar.barTintColor = [UIColor whiteColor]; //背景色
+    tabBarController.tabBar.tintColor = [UIColor room107GreenColor]; //选中色
     
-    NSArray *viewControllerConfigs = @[@{@"identifier":@"ViewController", @"title":@"个人", @"image":@"\ue64d", @"badgeValue":@"123"}, @{@"identifier":@"SuiteSearchViewController", @"title":@"找房", @"image":@"\ue61a", @"badgeValue":@"1"}, @{@"identifier":@"PostSuiteManageViewController", @"title":@"出租", @"image":@"\ue64c", @"badgeValue":@""}];
+    _viewControllerConfigs = @[@{@"identifier":@"ViewController", @"title":@"个人", @"image":@"\ue64d", @"badgeValue":@"123"}, @{@"identifier":@"SuiteSearchViewController", @"title":@"找房", @"image":@"\ue61a", @"badgeValue":@"1"}, @{@"identifier":@"PostSuiteManageViewController", @"title":@"出租", @"image":@"\ue64c", @"badgeValue":@""}];
     NSMutableArray *viewControllers = [[NSMutableArray alloc] init];
-    for (NSDictionary *config in viewControllerConfigs) {
+    for (NSDictionary *config in _viewControllerConfigs) {
         UIViewController *viewController = [[NSClassFromString(config[@"identifier"]) alloc] init];
         
         //每个ChildViewController增加一个UINavigationController
@@ -37,10 +40,10 @@
 
         [viewControllers addObject:navigationController];
     }
-    tabBarViewController.viewControllers = viewControllers;
+    tabBarController.viewControllers = viewControllers;
     
-    [tabBarViewController.tabBar.items enumerateObjectsUsingBlock:^(UITabBarItem *tabBarItem, NSUInteger idx, BOOL *stop) {
-        NSDictionary *config = [viewControllerConfigs objectAtIndex:idx];
+    [tabBarController.tabBar.items enumerateObjectsUsingBlock:^(UITabBarItem *tabBarItem, NSUInteger idx, BOOL *stop) {
+        NSDictionary *config = [_viewControllerConfigs objectAtIndex:idx];
         tabBarItem.title = config[@"title"];
         tabBarItem.image = [UIImage makeImageFromText:config[@"image"] font:[UIFont room107FontFive] color:[UIColor room107GreenColor]];
         tabBarItem.badgeValue = config[@"badgeValue"];
@@ -51,7 +54,7 @@
 //    CGRect frame = CGRectMake(0, CGRectGetHeight([[UIScreen mainScreen] bounds]) - navigationBarHeight, CGRectGetWidth([[UIScreen mainScreen] bounds]), navigationBarHeight);
 //    tabBarViewController.tabBar.frame = frame;
     
-    return tabBarViewController;
+    return tabBarController;
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -93,6 +96,14 @@
     // Saves changes in the application's managed object context before the application terminates.
     [self saveContext];
 }
+
+//#pragma mark - UITabBarControllerDelegate
+//- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
+//    [tabBarController.tabBar.items enumerateObjectsUsingBlock:^(UITabBarItem *tabBarItem, NSUInteger idx, BOOL *stop) {
+//        NSDictionary *config = [_viewControllerConfigs objectAtIndex:idx];
+//        tabBarItem.title = config[@"title"];
+//    }];
+//}
 
 #pragma mark - Core Data stack
 

@@ -10,4 +10,6 @@
 
 @interface PostSuiteManageViewController : Room107ViewController
 
+- (instancetype)init;
+
 @end

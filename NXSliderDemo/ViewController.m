@@ -36,7 +36,6 @@ static CGFloat priceFontSize = 15.0f;
     // Do any additional setup after loading the view, typically from a nib.
 
     [self.view setBackgroundColor:[UIColor lightGrayColor]];
-    [self setTitle:@"107间"];
     
     NSMutableDictionary *personalDictionary = [[NSMutableDictionary alloc] initWithObjectsAndKeys:@"个人", @"name", [[NSMutableArray alloc] initWithObjects:@{@"icon":@"1", @"name":@"主页"}, nil], @"values", nil];
     NSMutableDictionary *renterDictionary = [[NSMutableDictionary alloc] initWithObjectsAndKeys:@"租客", @"name", [[NSMutableArray alloc] initWithObjects:@{@"icon":@"1", @"name":@"我的找房"}, @{@"icon":@"1", @"name":@"目标房间"}, @{@"icon":@"1", @"name":@"租住管理"}, nil], @"values", nil];
@@ -51,6 +50,16 @@ static CGFloat priceFontSize = 15.0f;
     _menuTableView.dataSource = self;
     _menuTableView.tableFooterView = [self tableFooterView];
     [self.view addSubview:_menuTableView];
+}
+
+- (instancetype)init {
+    self = [super init];
+    
+    if (self) {
+        [self setTitle:@"107间"];
+    }
+    
+    return self;
 }
 
 - (UIView *)tableFooterView {
@@ -234,7 +243,6 @@ static CGFloat priceFontSize = 15.0f;
                 {
                     SuiteSearchViewController *suiteSearchViewController = [[SuiteSearchViewController alloc] init];
                     suiteSearchViewController.hidesBottomBarWhenPushed = YES;
-                    [suiteSearchViewController setTitle:_memuArray[indexPath.section][@"values"][indexPath.row][@"name"]];
                     [self.navigationController pushViewController:suiteSearchViewController animated:YES];
                 }
                     break;
@@ -275,7 +283,6 @@ static CGFloat priceFontSize = 15.0f;
                 {
                     PostSuiteManageViewController *postSuiteManageViewController = [[PostSuiteManageViewController alloc] init];
                     postSuiteManageViewController.hidesBottomBarWhenPushed = YES;
-                    [postSuiteManageViewController setTitle:_memuArray[indexPath.section][@"values"][indexPath.row][@"name"]];
                     [postSuiteManageViewController setHeaderType:HeaderTypeWhiteBack];
                     [self.navigationController pushViewController:postSuiteManageViewController animated:YES];
                 }
